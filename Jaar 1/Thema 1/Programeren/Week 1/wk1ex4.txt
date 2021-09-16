@@ -1,0 +1,15 @@
+# Hier wordt gekeken of er wat oost van de bot is en als daar niks is gaat het naar het oosten toe en verder naar stage 1, En als er wel een muur is doet het niks en gaat het naar stage 2 toe.
+0 *x** -> E 1
+0 *E** -> X 2
+
+# Hier wordt gekeken of er een muur naar het zuiden is en als die er niet is gaat de bot daarnaartoe en gaat dan verder naar stage 3, als er een muur is aan de zuid kant gaat de bot weer terug naar stage 0.
+1 ***x -> S 3
+1 ***S -> X 0
+
+# Hier wordt gekeken of er een muur noord is en als die er niet is gaat de bot naar het noorden toe en dan naar stage 0 en anders doet de bot niks en gaat het naar stage 3.
+2 x*** -> N 0
+2 N*** -> X 3
+
+# Als er een muur west is gaat de bot naar stage 1 en doet het niks en als er geen muur is gaat de bot naar het westen toe en gaat het naar stage 2.
+3 **x* -> W 2
+3 **W* -> X 1
