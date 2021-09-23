@@ -60,12 +60,13 @@ def flipside(s):
     param s: the string you want to swap
     type s: string
     """
-    lengte = len(s)
+    length = len(s)
+    short = length//2
     
-    if lengte%2 == 0:
-       flipped = s[lengte//2:] + s[:-(lengte//2)]
+    if length%2 == 0:
+       flipped = s[short:] + s[:-(short)]
     else:
-       flipped = s[lengte//2:] + s[:-(lengte//2)-1]
+       flipped = s[short:] + s[:-(short)-1]
     return flipped
 
 def convert_from_seconds(s):
