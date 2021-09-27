@@ -42,7 +42,7 @@ def interp(low, hi, fraction):
     param fraction: the percentage(0.00-1.00) of difference between low and high
     type fraction: int or float
     """
-    return (hi-low)*fraction
+    return (hi-low)*fraction + low
 
 def checkends(s):
     """
