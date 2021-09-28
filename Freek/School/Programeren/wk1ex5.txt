@@ -1,0 +1,22 @@
+# Opdracht: Geef the regels om zo effiecent mogelijk manier op de piramide op te lossen 
+# Naam: Freek van Witzenburg
+# Bestandsnaam wk1ex4.txt
+
+
+# Uitwerking 
+0 **x* -> W 0
+0 *xW* -> E 1
+0 xEWS -> N 5
+
+1 *x** -> E 1
+1 *E** -> W 2
+
+2 ***x -> S 0
+
+3 **x* -> W 3
+3 *xW* -> E 4
+
+4 *x** -> E 4
+4 *E** -> W 5
+
+5 **** -> N 3
