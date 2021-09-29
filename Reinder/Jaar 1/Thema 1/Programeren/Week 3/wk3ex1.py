@@ -90,3 +90,6 @@ def snowflake(sidelength, levels):
     left(120)
     flakeside(sidelength, levels)
     left(120)
+
+def flakeside(sl, lvls):
+        
