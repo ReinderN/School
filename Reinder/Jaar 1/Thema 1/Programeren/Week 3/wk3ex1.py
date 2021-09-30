@@ -91,5 +91,17 @@ def snowflake(sidelength, levels):
     flakeside(sidelength, levels)
     left(120)
 
-def flakeside(sl, lvls):
-        
+def flakeside(sidelength, levels):
+    if levels == 0:
+        forward(sidelength)
+    else:
+        flakeside(sidelength/3, levels-1)
+        right(60)
+        flakeside(sidelength/3, levels-1)
+        left(120)
+        flakeside(sidelength/3, levels-1)
+        right(60)
+        flakeside(sidelength/3, levels-1)
+
+def reset():
+    resetscreen()
