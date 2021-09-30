@@ -92,6 +92,11 @@ def snowflake(sidelength, levels):
     left(120)
 
 def flakeside(sidelength, levels):
+    """flakeside is part of the function snowflake to make a third of its side
+
+    sidelength: the total lenght of one side
+    levels: the amount of times you want it to make spikes
+    """
     if levels == 0:
         forward(sidelength)
     else:
