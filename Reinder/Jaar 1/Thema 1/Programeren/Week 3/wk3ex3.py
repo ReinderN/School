@@ -61,17 +61,34 @@ assert lc_fdiv(4) == [0.0, 0.5, 1.0, 1.5]
 
 # Stap 1, deel 1
 def unitfracs(n):
-    """Vergeet niet deze docstring te verbeteren!
+    """unitfracs returns a list with values that are equal to 1/n ... n/n
+    n: the value you want to have fractures from
     """
     return [x / n for x in range(n)]    
 
 def scaledfracs(low, hi, n):
+    """Scaledfracs returns a list of values with a fracture of the values between low and high
+    low: The lower limit of the values in the list
+    high: The upper limit of the values in the list
+    n: the amount of times you want in between low and high
+    """
     return [low + (hi-low) * x for x in unitfracs(n)]
 
 def sqfracs(low, hi, n):
+    """sqfracs returns a list with values between low and high put to the power of two
+    low: The lower limit of the values in the list
+    high: The upper limit of the values in the list
+    n: the amount of times you want in between low and high    
+    """
     return [x**2 for x in scaledfracs(low, hi, n)]
 
 def f_of_fracs(f, low, hi, n):
+    """f_of_fracs return a list of values between low and high that have been put trough another function
+    f: another function
+    low: The lower limit of the values in the list
+    high: The upper limit of the values in the list
+    n: the amount of times you want in between low and high
+    """
     return [f(x) for x in scaledfracs(low, hi, n)]
 
 def integrate(f, low, hi, n):
@@ -85,7 +102,8 @@ def integrate(f, low, hi, n):
        under f, drawn at the left endpoints of n uniform steps
        from low to hi
     """
-
+    y = f_of_fracs(f, low, hi, n)
+    return 2.5*sum(y)
 
 #Test de unitfracs funcite
 assert unitfracs(2) == [0.0, 0.5]
