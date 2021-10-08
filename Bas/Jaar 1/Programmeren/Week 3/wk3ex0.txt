@@ -1,0 +1,9 @@
+* Wat is het meest interessante of belangrijke idee in dit artikel volgens jou; en waarom?
+* Wat is een toepassing waar (volgens jou) de technologie van Watson aan kan bijdragen? Of denk je dat de mogelijkheden van Watson maar weinig kunnen betekenen? Je kan hier webartikelen voor zoeken, of zelf hierover speculeren.
+* Beschrijf hoe jij de overeenkomsten en verschillen ziet tussen de manier van denken van Watson en die van mensen.
+
+* Het meest interessante is idee is om Watson of een soort gelijke AI te gebruiken voor tech support, het lijkt mij voor een bedrijf erg aantrekkelijk om alle call medewerkers die ze hebben we vervangen voor een AI. Ook kan een bedrijf makkelijker 24/7 support hebben aangezien een computer nooit hoeft te slapen.
+
+* Ik denk dat Watson zelf nog niet zo heel handig is in veel situaties aangezien het nog tee jong is. Als je Watson echt zou willen gebruiken zou je eigenlijk moeten zorgen dat Watson in staat is een gesprek te voeren zodat het niet voelt alsof je gewoon handsfree google gebruikt.
+
+* Het analyseren van de vraag doen mensen en Watson hetzelfde: het belangrijkste uit de zin halen, wat betekend de vraag nou echt. Verder gaat het heel anders mensen gaan dan in hun hoofd af wat ze allemaal weten om dan de vraag te kunnen beantwoorden mits ze het antwoord niet weten gokken ze iets wat in de buurt kan komen. Watson doet dit anders, Watson pakt de belangrijke delen van de vraag en gaat dan opzoek online naar het antwoord dan maakt hij waarschijnlijk een lijstje met mogelijke antwoorden en zeg dan de gene die het meest relevant is (waar Watson dus het meest zeker over is).
