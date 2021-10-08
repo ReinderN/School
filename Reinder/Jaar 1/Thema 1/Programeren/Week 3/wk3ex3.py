@@ -105,6 +105,10 @@ def integrate(f, low, hi, n):
     y = f_of_fracs(f, low, hi, n)
     return 2.5*sum(y)
 
+def c(x):
+    """c is a semicircular function of radius two"""
+    return (4 - x ** 2) ** 0.5
+
 #Test de unitfracs funcite
 assert unitfracs(2) == [0.0, 0.5]
 assert unitfracs(5) == [0.0, 0.2, 0.4, 0.6, 0.8]
@@ -124,3 +128,9 @@ assert f_of_fracs(sin, 0, pi, 2) == [0.0, 1.0]
 #Test de integrate functie
 assert integrate(dbl, 0, 10, 4) == 75
 assert integrate(sq, 0, 10, 4) == 2.5 * sum([0, 2.5*2.5, 5*5, 7.5*7.5])
+
+"""
+Vraag 1:
+    Dit komt omdat er altijd kleine witte vlakken overblijven omdat je met de manier waarmee je dit berekt nooit een perfect gevulde driehoek kan krijgen.
+
+"""
