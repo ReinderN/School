@@ -102,8 +102,7 @@ def integrate(f, low, hi, n):
        under f, drawn at the left endpoints of n uniform steps
        from low to hi
     """
-    y = f_of_fracs(f, low, hi, n)
-    return 2.5*sum(y)
+    return sum([f_of_fracs(f, low, hi, n)[x]*scaledfracs(low, hi, n)[1] for x in range(n)])
 
 def c(x):
     """c is a semicircular function of radius two"""
@@ -133,4 +132,13 @@ assert integrate(sq, 0, 10, 4) == 2.5 * sum([0, 2.5*2.5, 5*5, 7.5*7.5])
 Vraag 1:
     Dit komt omdat er altijd kleine witte vlakken overblijven omdat je met de manier waarmee je dit berekt nooit een perfect gevulde driehoek kan krijgen.
 
+    de functie die iets altijd overschat zou (hi-low)*scaledfracs(hi, hi, n)/2
+"""
+
+"""
+Vraag 2:
+    integrate(c, 0, 2, 200) geeft 3.151176944839526
+    integrate(c, 0, 2, 2000) geeft 3.1425795059119648
+
+    De waarde zal steeds dichter naar pi toekomen omdat dat een verhouding heeft met de radius van een cirkel.
 """
