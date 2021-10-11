@@ -95,11 +95,19 @@ def letter_prob(c):
     return 1.0
 
 def score(s):
+    """score counts the total point of each character in the string(s)
+
+    s: the string you want to know the score from
+    """
     scorepoints = [letter_prob(c) for c in s]
     spoints = sum(scorepoints)
     return [spoints, s]
 
 def decipher(s):
+    """Tries to decipher the string(s) using the ceasar method
+
+    s: string you want to decrypt
+    """
     String_List = [encipher(s, n) for n in range(26)]
     points = [score(s) for s in String_List]
     return max(points)[1]
