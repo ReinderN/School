@@ -112,6 +112,34 @@ def decipher(s):
     points = [score(s) for s in String_List]
     return max(points)[1]
 
+def count(e, L):
+    """counts the amount of times an item (e) is in a list(L)
+
+    e: the item you want to check in a list(L)
+    L: the list you want the item(e) to be checked in
+    """
+    lc = [1 for x in L if x == e]
+    return sum(lc)
+
+def blsort(L):
+    """sorts a binary list(L)
+
+    L: the list you want to sort (only binary)
+    """
+    zero = count(0, L)
+    one = count(1, L)
+    sortedL = [0]*zero + [1]*one
+    return sortedL
+
+def gensort(L):
+    if L == []:
+        return []
+    else:
+        minimum = min(L)
+        loc = L.index(minimum)
+        L.pop(loc)
+        return [minimum] + gensort(L)
+
 assert encipher("xyza", 1) == "yzab"
 assert encipher("Z A", 1) == "A B"
 assert encipher('*ab?', 1) == '*bc?'
@@ -121,3 +149,9 @@ assert encipher('Caesarcijfer? Ik heb liever Caesarsalade.', 25) == 'Bzdrzqbhied
 assert decipher('Bzdrzqbhiedq? Hj gda khdudq Bzdrzqrzkzcd.') == 'Caesarcijfer? Ik heb liever Caesarsalade.'
 assert decipher('Aadxas ue exqotfe pq haadflqffuzs hmz baxufuqw yqf mzpqdq yuppqxqz.') == 'Oorlog is slechts de voortzetting van politiek met andere middelen.'
 assert decipher('Wjnsijw Sttwirfsx') == 'Reinder Noordmans'
+
+assert blsort([1, 0, 1]) == [0,1,1]
+assert blsort([1, 0, 1, 0, 1, 0, 1]) == [0, 0, 0, 1, 1, 1, 1]
+
+assert gensort([42, 1, 3.14]) == [1, 3.14, 42]
+assert gensort([7, 9, 4, 3, 0, 5, 2, 6, 1, 8]) == [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
