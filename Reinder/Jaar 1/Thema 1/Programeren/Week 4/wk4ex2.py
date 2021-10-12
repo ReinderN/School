@@ -140,6 +140,23 @@ def gensort(L):
         L.pop(loc)
         return [minimum] + gensort(L)
 
+def calc(s,t):
+    if s == "":
+        return 0
+    elif s[0] in t:
+        t.pop(t.index(s[0]))
+        return 1 + calc(s[1:], t)
+    else:
+        return 0 + calc(s[1:], t)
+
+def lingo(s,t):
+    tL = [x for x in t]
+    points = calc(s, tL)
+    return points
+
+def exact_change(target_amount, L):
+    
+
 assert encipher("xyza", 1) == "yzab"
 assert encipher("Z A", 1) == "A B"
 assert encipher('*ab?', 1) == '*bc?'
@@ -155,3 +172,8 @@ assert blsort([1, 0, 1, 0, 1, 0, 1]) == [0, 0, 0, 1, 1, 1, 1]
 
 assert gensort([42, 1, 3.14]) == [1, 3.14, 42]
 assert gensort([7, 9, 4, 3, 0, 5, 2, 6, 1, 8]) == [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+assert lingo('diner', 'proza') == 1
+assert lingo('beeft', 'euvel') == 2
+assert lingo('gattaca', 'aggtccaggcgc') == 5
+assert lingo('gattaca', '') == 0
