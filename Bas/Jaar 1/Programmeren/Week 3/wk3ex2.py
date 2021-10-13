@@ -39,3 +39,41 @@ def rwsteps(start, low, hi):
         print("|","_"*(5+step), "😴", "_"*(5-step),"|")
         steps -= 1
         return 1 + rwsteps(start, steps, steps)
+
+def rwpos_plain(start, nsteps):
+    """rwpos gets a starting position and the amount of steps the bot needs to take to get a final position
+    
+    start: the starting position for the bot as an int
+    nsteps: the amount of steps the bot needs to take as a int
+
+    returns the amount of steps the bot has taken
+    """
+    if nsteps == 0:
+        return start
+    else:
+        start += rs()
+        return rwpos_plain(start, nsteps-1)
+
+def ave_signed_displacement(numtrials):
+    lc = [rwpos_plain(0,100) for x in range(numtrials)]
+    print(sum(lc)/len(lc))
+
+def ave_squared_displacement(numtrials):
+    lc = [rwpos_plain(0,100) for x in range(numtrials)]
+    kwadrant = [x**2 for x in lc]
+    print(sum(kwadrant)/len(kwadrant))
+
+#resultaten ave_signed_displacement
+#1. -0.2236 2. 0.1228 3. 0.0288 4. -0.2016 5. -0.1512
+#Om dit te kunnen bereken heb ik 5 keer 500 recursies uitgevoerd en de resultaten daarven gemideld te nemen
+#Hieruit blijkt dus dat de gemiddelde totale afwijking dus rond de 0 zit na het zetten van 100 willekeurige stappen
+#Ook heb ik het geprobeerd met 500 stappen en daar kwam uit dat het nog steeds ongeveer rond de 0 zit
+
+
+#resultaten ave_squared_displacement
+#1. 99.4176 2. 99.264 3. 100.3752 4. 98.8264 5. 97.1792
+#Om dit te kunnen bereken heb ik 5 keer 500 recursies uitgevoerd en de resultaten daarvan tot de macht 2 gedaan en het gemiddelde daar weer van te nemen
+#Het gemiddelde is dus na het zetten van 100 stappen is rond de 100
+#Het gemiddelde nu het zetten van 500 willekeurige stappen is nu rond de 500
+
+#Dus het gemmidelde van ave_signed_displacement hangt af van de start en het gemidelde van ave_squared_displacement hangt af van het totaal aantal stappen
