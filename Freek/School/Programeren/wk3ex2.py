@@ -1,6 +1,6 @@
 # Programmeren I, week 3 opgave 2
 # Bestandsnaam: wk3ex2.py
-# Naam: Bas Mellens
+# Naam: Freek van Witzenburg
 # Probleemomschrijving: Slaapwandelende student
 
 from random import *
@@ -14,13 +14,19 @@ def rs():
     return choice([-1, 1])
 
 def rwpos(start, nsteps):
-    """rwpos gives the position of the sleepwalker after nsteps random."""
-    if nsteps < 0:
-        return 0
+    """rwpos gets a starting position and the amount of steps the bot needs to take to get a final position
+    
+    start: the starting position for the bot as an int
+    nsteps: the amount of steps the bot needs to take as a int
+
+    returns the amount of steps the bot has taken
+    """
+    print(start)
+    if nsteps == 0:
+        return start
     else:
-        start = start + rs()
-        rwpos(start, nsteps-1)
-        print("start is: ", start)
+        start += rs()
+        return rwpos(start, nsteps-1)
 
 def rwsteps(start, low, hi):
     """rwpsteps needs a starting postion and then takes a random amount of steps between low and high
