@@ -1,6 +1,6 @@
 # Programmeren I, Week 3 Opgave 3
 # Bestandsnaam: wk3ex3.py
-# Naam: Bas Mellens
+# Naam: Freek van Witzenburg
 # Probleemomschrijving: List comprehensions
 
 
@@ -102,11 +102,10 @@ def integrate(f, low, hi, n):
        under f, drawn at the left endpoints of n uniform steps
        from low to hi
     """
-    y = f_of_fracs(f, low, hi, n)
-    return 2.5*sum(y)
+    return sum([f_of_fracs(f, low, hi, n)[x]*scaledfracs(low, hi, n)[1] for x in range(n)])
 
 def c(x):
-    """c is a semicircular function of radius 2"""
+    """c is a semicircular function of radius two"""
     return (4 - x ** 2) ** 0.5
 
 #Test de unitfracs funcite
@@ -131,5 +130,15 @@ assert integrate(sq, 0, 10, 4) == 2.5 * sum([0, 2.5*2.5, 5*5, 7.5*7.5])
 
 """
 Vraag 1:
-    Dit komt omdat er altijd witte vlakken over blijven op deze manier. Je zult dus nooit een perfect gevulde driehoek krijgen.
+    Dit komt omdat er altijd kleine witte vlakken overblijven omdat je met de manier waarmee je dit berekt nooit een perfect gevulde driehoek kan krijgen.
+
+    de functie die iets altijd overschat zou (hi-low)*scaledfracs(hi, hi, n)/2
+"""
+
+"""
+Vraag 2:
+    integrate(c, 0, 2, 200) geeft 3.151176944839526
+    integrate(c, 0, 2, 2000) geeft 3.1425795059119648
+
+    De waarde zal steeds dichter naar pi toekomen omdat dat een verhouding heeft met de radius van een cirkel.
 """

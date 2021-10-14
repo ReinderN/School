@@ -154,8 +154,31 @@ def lingo(s,t):
     points = calc(s, tL)
     return points
 
-def exact_change(target_amount, L):
-    
+def exact_change(w, L):
+    if L == [] and w == 0:
+        return True
+    elif L == []:
+        return False
+    elif w == sum(L):
+        return True
+    else:
+        useit = exact_change(w, L[1:])
+        loseit = exact_change(w, L[:-1])
+        if useit or loseit:
+            return True
+        else:
+            return False
+
+assert exact_change(42, [25, 1, 25, 10, 5, 1]) == True
+assert exact_change(42, [25, 1, 25, 10, 5]) == False
+assert exact_change(42, [23, 1, 23, 100]) == False
+assert exact_change(42, [23, 17, 2, 100]) == True
+assert exact_change(42, [100, 25, 1, 25, 10, 5, 1, 100])
+assert exact_change(0, [4, 5, 6]) == True
+assert exact_change(-47, [4, 5, 6]) == False
+assert exact_change(0, []) == True
+assert exact_change(42, []) == False
+#assert exact_change(42, [25, 16, 2, 15]) == True
 
 assert encipher("xyza", 1) == "yzab"
 assert encipher("Z A", 1) == "A B"

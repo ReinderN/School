@@ -1,12 +1,14 @@
-#Vraag :
+#Vragen:
 
-Anderson heeft het over iemands "MySpace"-pagina. 
-Dit is een duidelijke maar eenvoudige manier waaraan je kan zien dat dit artikel (van minstens tien jaar oud) verouderd is. 
-Wat is een diepere manier waarop je kan zien dat de ideeën uit dit artikel laten zien verouderd zijn en uit 2008 komen? 
-Vergelijk één van de ideeën met meer recente opinies, die van jezelf, anderen of beide kunnen zijn.
+1. Wat is het meest interessante of belangrijke idee in dit artikel volgens jou; en waarom?
+2. Wat is een toepassing waar (volgens jou) de technologie van Watson aan kan bijdragen? 
+   Of denk je dat de mogelijkheden van Watson maar weinig kunnen betekenen? Je kan hier webartikelen voor zoeken, of zelf hierover speculeren.
+3. Beschrijf, ook als je niet de "Watson-achtige" applicatie hebt kunnen gebruiken, 
+   hoe jij de overeenkomsten en verschillen ziet tussen de manier van denken van Watson en die van mensen.
 
-#Antwoord :
-
-"The big target here isn't advertising, though. It's science." Deze quote uit het artikel van Wired, illustreert dat het streven van bedrijven naar het zoveel mogelijk 
-verzamelen van data nog geen doelwit was om via advertenties mensen over te halen om spullen te kopen. Hieruit blijkt dat het artiktel in 2008 geschreven is gezien Facebook
-nog niet een mainstream idee is waar het bedrijf voornaamste hun inkomsten uit haalt. Hierover is recent nog een rechtszaak geweest over dat Facebook te veel de privacy van gebruiks gebruikt
+# Antwoorden:
+1. Hoe een voorloper van A.I werd gebruikt in de jaren 60 voor het vermaak van televisie. Helemaal omdat in de jaren 60 hier technologisch nog weinig vooruit gang was gemaakt
+en dit voor nu in het heden een groot deel van ons leven beinvloed zoals op social media en machine learning dit ook werd toegepast.
+2. Nu vooral in door middel van A.I. en de daarbij hoordende algoritmes om onze toegang tot informatie te vergroten.
+3. Watson denkt veel efficienter dan mensen. Al blijft A.I in principe gemaakt door mensen en daardoor altijd als gestelde regels in the Three laws for robotics. 
+Hierdoor heeft wel een groot raakvlak met mensenlijk denken gezien het gemaakt is door mensen.
