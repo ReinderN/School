@@ -169,6 +169,20 @@ def exact_change(w, L):
         else:
             return False
 
+def lcs(s, t):
+    """
+    """
+    if s == "" or t == "":
+        return ""
+    if s[0] == t[0]:
+        return s[0] + lcs(s[1:], t[1:])
+    result1 = lcs(s[1:], t)
+    result2 = lcs(s, t[1:])
+    if len(result1) > len(result2):
+        return result1
+    else:
+        return result2
+
 assert exact_change(42, [25, 1, 25, 10, 5, 1]) == True
 assert exact_change(42, [25, 1, 25, 10, 5]) == False
 assert exact_change(42, [23, 1, 23, 100]) == False
