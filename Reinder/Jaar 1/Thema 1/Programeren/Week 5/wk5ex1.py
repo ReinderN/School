@@ -4,12 +4,23 @@
 # Probleemomschrijving: conversie binair <-> decimaal
 
 def is_odd(n):
+    """is_odd checks if a number(n) is odd or not
+    
+    n: int
+    returns: boolean
+    """
     if n%2 == 0:
         return False
     else:
         return True
 
 def num_to_binary(n):
+    """
+    num_to_binary changes a non negative number(n) to a binary string
+
+    n: non negative int
+    returns: str
+    """
     if n == 0:
         return ""
     elif n % 2 == 1:
@@ -19,6 +30,10 @@ def num_to_binary(n):
 
 def binary_to_num(s):
     """
+    binary_to_num changes a binary string(s) to an int number
+
+    s: str
+    returns: int
     """
     if s == "":
         return 0
@@ -30,6 +45,12 @@ def binary_to_num(s):
         return 2*binary_to_num(s[:-1]) + 0
 
 def increment(S):
+    """
+    increment adds 1 to the number value of a binary string(S)
+
+    S: string
+    returns: S+1
+    """
     if isinstance(S, int):
         n = S
     else:
@@ -46,15 +67,125 @@ def increment(S):
         return ny[nleny:]
 
 def count(s,n):
-    for x in range(n):
-        print(increment(int(s)+x))
+    """
+    count adds 1 to a binary string(s) a certain number(n) of times
 
+    s: binary string
+    n: non negative int
+    returns: list of counts
+    """
+    if n < 0:
+        return
+    else:
+        print(s)
+        count(increment(s), n-1)
 
-assert binary_to_num("") == 0
-assert binary_to_num("101010") == 42
+def num_to_ternary(n):
+    """
+    num_to_ternary changes a non negative number(n) to a ternary string
 
-assert num_to_binary(0) == ""
-assert num_to_binary(42) == "101010"    
+    n: non negative int
+    returns: str
+    """
+    if n == 0:
+        return ""
+    elif n % 3 == 1:
+        return num_to_ternary(n//3) + "1"
+    elif n % 3 == 2:
+        return num_to_ternary(n//3) + "2"
+    else:
+        return num_to_ternary(n//3) + "0"
 
-assert not is_odd(42)
-assert is_odd(43)
+def ternary_to_num(s):
+    """
+    ternary_to_num changes a ternary string(s) to an int number
+
+    s: str
+    returns: int
+    """
+    if s == "":
+        return 0
+
+    elif s[-1] == "1":
+        return 3*ternary_to_num(s[:-1]) + 1
+
+    elif s[-1] == "2":
+        return 3*ternary_to_num(s[:-1]) + 2
+
+    else:
+        return 3*ternary_to_num(s[:-1]) + 0
+
+def balanced_ternary_to_num(s):
+    """
+    balanced_ternary_to_num changes a balanced ternary string(s) to an int number
+
+    s: str
+    returns: int
+    """
+    if s == "":
+        return 0
+
+    elif s[-1] == "+":
+        return 3*balanced_ternary_to_num(s[:-1]) + 1
+
+    elif s[-1] == "-":
+        return 3*balanced_ternary_to_num(s[:-1]) + -1
+
+    else:
+        return 3*balanced_ternary_to_num(s[:-1]) + 0
+
+def num_to_balanced_ternary(n):
+    """
+    balanced_num_to_ternary changes a non negative number(n) to a balanced ternary string
+
+    n: non negative int
+    returns: str
+    """
+    if n == 0:
+        return ""
+    elif n % 3 == 1:
+        return num_to_balanced_ternary(n//3) + "+"
+    elif n % 3 == 2:
+        return num_to_balanced_ternary((n//3)+1) + "-"
+    elif n % 3 == 0:
+        return num_to_balanced_ternary(n//3) + "0"    
+
+assert is_odd(3)
+assert not is_odd(4)
+assert is_odd(-3)
+assert not is_odd(-4)
+
+assert num_to_binary(5) == '101'
+assert num_to_binary(12) == '1100'
+assert num_to_binary(100) == '1100100'
+assert num_to_binary(5321) == '1010011001001'
+
+assert binary_to_num('101') == 5
+assert binary_to_num('1100') == 12
+assert binary_to_num('1100100') == 100
+assert binary_to_num('1010011001001') == 5321
+
+assert increment('101') == '00000110'
+assert increment('1100') == '00001101'
+assert increment('1100100') == '01100101'
+assert increment('1010011001001') == '11001010'
+
+assert num_to_ternary(5) == '12'
+assert num_to_ternary(12) == '110' 
+assert num_to_ternary(100) == '10201'
+assert num_to_ternary(5321) == '21022002'
+
+assert ternary_to_num('12') == 5
+assert ternary_to_num('110') == 12
+assert ternary_to_num('10201') == 100
+assert ternary_to_num('21022002') == 5321
+
+assert balanced_ternary_to_num('+--') == 5
+assert balanced_ternary_to_num('++0') == 12
+assert balanced_ternary_to_num('++-0+') == 100
+assert balanced_ternary_to_num('+-++0-0+-') == 5321
+
+assert num_to_balanced_ternary(5) == '+--'
+assert num_to_balanced_ternary(12) == '++0'
+assert num_to_balanced_ternary(100) == '++-0+'
+assert num_to_balanced_ternary(5321) == '+-++0-0+-'
