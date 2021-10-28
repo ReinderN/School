@@ -40,6 +40,46 @@ def add_b(s, t):
     else:
         carry = add_b("1", s[:-1])
         return add_b(carry, t[:-1]) + "0"
+def rle(input_string):
+    """ takes input as string and checks repeating bit
+        return repeating bit with their counts. """
+    count = 1
+    prev = ''
+    lst = []
+    for character in input_string:
+        if character != prev:
+    	    if prev:
+                entry = (prev,count)
+        lst.append(entry)
+        #print lst
+        count = 1
+        prev = character
+    else:
+        count += 1
+    else:
+    entry = (character,count)
+    lst.append(entry)
+    return lst
+
+def new_dict(s):
+            """ input of rle(S) i.e., tuples of bit and repeating counts
+                output dict as bit as key and value as counts with binary conversion.
+            """  
+
+            dict=rle(s)
+            new_dict = []
+            temp = []
+            for k,v in dict:
+                temp = k + "%07d" % int(bin(v)[2:])
+                new_dict.append(temp)
+            return new_dict
 
 def compress(s):
+ """ takes a binary string s of length less than or equal to 64 as 
+input and returns another binary string as output."""
+            
+ l = new_dict(s)
+ return''.join(str(elem) for elem in l)
+
+def uncompress (c):
     """"""
