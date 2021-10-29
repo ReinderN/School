@@ -36,7 +36,12 @@ def num_to_base_b(n, b):
 
 def base_b_to_num(s, b):
     '''
+    base_b_to_num converts a base from 2 to 10 into a decimal num
 
+    s = string in base
+    b = the base the string is
+
+    returns: Int
     '''
 
     new_s = s[:-1]
@@ -67,7 +72,13 @@ def base_b_to_num(s, b):
 
 def base_to_base(b1, b2, s_in_b1):
     '''
+    converts a base into another base
 
+    b1 = the base the string is in
+    b2 = the base you want to convert to
+    s_in_b1 = the string that needs to be converted to another b
+
+    returns: Str
     '''
 
     num = base_b_to_num(s_in_b1, b1)
@@ -76,7 +87,12 @@ def base_to_base(b1, b2, s_in_b1):
 
 def add(s, t):
     '''
+    adds to binary numbers together
 
+    s: the first binary number
+    t: the second binary number
+
+    returns: Str
     '''
 
     num1 = base_b_to_num(s, 2)
@@ -86,6 +102,14 @@ def add(s, t):
 
 
 def add_b(s, t):
+    '''
+    add_b adds to binary numbers together
+
+    s: the first binary number
+    t: the second binary number
+
+    returns: Str
+    '''
     if len(s) == 0:
         return t
     elif len(t) == 0:
