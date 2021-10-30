@@ -127,6 +127,12 @@ def add_b(s, t):
 
 
 def counter(s):
+    '''
+    counts the amount of times the first character of s is following itself.
+
+    s: the string you want to count
+    returns: list; item[0] == the character; item[1] == the amount of times item[0] appears
+    '''
     char = s[0]
     count = 0
     for x in s:
@@ -153,6 +159,12 @@ def num_to_binary(n):
 
 
 def num_to_binary_8bit(n):
+    '''
+    converts the num_to_binary number to an 8 bit vallue
+
+    n: the num that needs to be in an 8bit string
+    returns: Str
+    '''
     bits = num_to_binary(n)
     return '0'*(8-len(bits)) + bits
 
@@ -175,6 +187,12 @@ def flattenNestedList(nestedList):
 
 
 def compress(s):
+    '''
+    compresses a binary string
+
+    s: the string that needs to be compressed
+    returns: Str
+    '''
     compr = ''
     if s == '':
         return ''
@@ -214,19 +232,31 @@ def binary_to_num(s):
         return 2*binary_to_num(s[:-1]) + 0
 
 
-def uncompresser(l):
-    if l[0] == '0':
-        return '0'*binary_to_num(l[1:])
+def uncompresser(s):
+    '''
+    uncrompresses 8 binary bits
+
+    s: the 8 bit string that needs to be uncompressed
+    returns: Str
+    '''
+    if s[0] == '0':
+        return '0'*binary_to_num(s[1:])
     else:
-        return '1'*binary_to_num(l[1:])
+        return '1'*binary_to_num(s[1:])
 
 
 def uncompress(c):
-    word = ''
+    '''
+    uncompresses an binary string
+
+    c: the string that needs to be uncompressed
+    returns: the uncompressed string
+    '''
+    unc = ''
     lenght = len(c)//8
     for x in range(lenght):
-        word += uncompresser(c[x*8:(x+1)*8])
-    return word
+        unc += uncompresser(c[x*8:(x+1)*8])
+    return unc
 
 
 assert num_to_base_b(9944, 2) == '10011011011000'
@@ -270,3 +300,11 @@ assert add_b('10001', '1001011') == '1011100'
 assert add_b('10011101', '11') == '10100000'
 assert add_b('1', '10') == '11'
 assert add_b('1001', '1001') == '10010'
+
+assert compress('1'*50 + '0'*120+'1'*10) == '101100100111100010001010'
+assert compress('1111101') == '100001010000000110000001'
+assert compress('0'*127+'1'*127) == '0111111111111111'
+
+assert uncompress('101100100111100010001010') == '1'*50 + '0'*120+'1'*10
+assert uncompress('100001010000000110000001') == '1111101'
+assert uncompress('0111111111111111') == '0'*127+'1'*127
