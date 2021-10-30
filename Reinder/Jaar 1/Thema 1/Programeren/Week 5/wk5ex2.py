@@ -126,6 +126,109 @@ def add_b(s, t):
         return add_b(carry, t[:-1]) + '0'
 
 
+def counter(s):
+    char = s[0]
+    count = 0
+    for x in s:
+        if x == char:
+            count += 1
+        else:
+            return [char, count]
+    return [char, count]
+
+
+def num_to_binary(n):
+    """
+    num_to_binary changes a non negative number(n) to a binary string
+
+    n: non negative int
+    returns: str
+    """
+    if n == 0:
+        return ""
+    elif n % 2 == 1:
+        return num_to_binary(n//2) + "1"
+    elif n % 2 == 0:
+        return num_to_binary(n//2) + "0"
+
+
+def num_to_binary_8bit(n):
+    bits = num_to_binary(n)
+    return '0'*(8-len(bits)) + bits
+
+
+def flattenNestedList(nestedList):
+    ''' Converts a nested list to a flat list 
+    van: https://thispointer.com/python-convert-list-of-lists-or-nested-list-to-flat-list/
+    '''
+    flatList = []
+    # Iterate over all the elements in given list
+    for elem in nestedList:
+        # Check if type of element is list
+        if isinstance(elem, list):
+            # Extend the flat list by adding contents of this element (list)
+            flatList.extend(flattenNestedList(elem))
+        else:
+            # Append the elemengt to the list
+            flatList.append(elem)
+    return flatList
+
+
+def compress(s):
+    compr = ''
+    if s == '':
+        return ''
+    else:
+        charcount = counter(s)
+        if charcount[0] == '1':
+            charcount[1] += 128
+            base = num_to_binary_8bit(charcount[1])
+            compressed = compress(s[charcount[1]-128:])
+            aflat_list = flattenNestedList([base, compressed])
+            for x in aflat_list:
+                compr += x
+            return compr
+        else:
+            base = num_to_binary_8bit(charcount[1])
+            compressed = compress(s[charcount[1]:])
+            aflat_list = flattenNestedList([base, compressed])
+            for x in aflat_list:
+                compr += x
+            return compr
+
+
+def binary_to_num(s):
+    """
+    binary_to_num changes a binary string(s) to an int number
+
+    s: str
+    returns: int
+    """
+    if s == "":
+        return 0
+
+    elif s[-1] == "1":
+        return 2*binary_to_num(s[:-1]) + 1
+
+    else:
+        return 2*binary_to_num(s[:-1]) + 0
+
+
+def uncompresser(l):
+    if l[0] == '0':
+        return '0'*binary_to_num(l[1:])
+    else:
+        return '1'*binary_to_num(l[1:])
+
+
+def uncompress(c):
+    word = ''
+    lenght = len(c)//8
+    for x in range(lenght):
+        word += uncompresser(c[x*8:(x+1)*8])
+    return word
+
+
 assert num_to_base_b(9944, 2) == '10011011011000'
 assert num_to_base_b(144556, 3) == '21100021221'
 assert num_to_base_b(15, 4) == '33'
