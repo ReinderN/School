@@ -40,6 +40,7 @@ def add_b(s, t):
     else:
         carry = add_b("1", s[:-1])
         return add_b(carry, t[:-1]) + "0"
+
 def rle(input_string):
     """ takes input as string and checks repeating bit
         return repeating bit with their counts. """
@@ -56,10 +57,11 @@ def rle(input_string):
         prev = character
     else:
         count += 1
+        
     else:
-    entry = (character,count)
-    lst.append(entry)
-    return lst
+        entry = (character,count)
+        lst.append(entry)
+        eturn lst
 
 def new_dict(s):
             """ input of rle(S) i.e., tuples of bit and repeating counts
