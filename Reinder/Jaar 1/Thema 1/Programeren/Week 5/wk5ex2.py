@@ -1,3 +1,5 @@
+# Gemaakt door: Reinder Noordmans, Bas Mellens, Freek van Witzenburg
+
 def num_to_base_b(n, b):
     '''
     num_to_base_b takes an non negative number(n) and converts it to another base(b)
