@@ -1,4 +1,4 @@
-# Gemaakt door: Reinder Noordmans, Bas Mellens, Freek van Witzenburg
+# Gemaakt door: Reinder Noordmans, Bas Mellens, Freek van Witzenburg & Mike Engelen
 
 def num_to_base_b(n, b):
     '''
