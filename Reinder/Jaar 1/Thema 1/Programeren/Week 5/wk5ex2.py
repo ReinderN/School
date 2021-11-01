@@ -1,3 +1,5 @@
+# Gemaakt door: Reinder Noordmans, Bas Mellens, Freek van Witzenburg & Mike van Engelen
+
 def num_to_base_b(n, b):
     '''
     num_to_base_b takes an non negative number(n) and converts it to another base(b)
@@ -8,30 +10,10 @@ def num_to_base_b(n, b):
     returns: Str
     '''
 
-    new_n = n//b
-
     if n == 0:
-        return ''
-    elif n % b == 1:
-        return num_to_base_b(new_n, b) + '1'
-    elif n % b == 2:
-        return num_to_base_b(new_n, b) + '2'
-    elif n % b == 3:
-        return num_to_base_b(new_n, b) + '3'
-    elif n % b == 4:
-        return num_to_base_b(new_n, b) + '4'
-    elif n % b == 5:
-        return num_to_base_b(new_n, b) + '5'
-    elif n % b == 6:
-        return num_to_base_b(new_n, b) + '6'
-    elif n % b == 7:
-        return num_to_base_b(new_n, b) + '7'
-    elif n % b == 8:
-        return num_to_base_b(new_n, b) + '8'
-    elif n % b == 9:
-        return num_to_base_b(new_n, b) + '9'
+        return""
     else:
-        return num_to_base_b(new_n, b) + '0'
+        return num_to_base_b(n // b, b) + str(n % b)
 
 
 def base_b_to_num(s, b):
@@ -43,31 +25,10 @@ def base_b_to_num(s, b):
 
     returns: Int
     '''
-
-    new_s = s[:-1]
-
     if s == '':
         return 0
-    elif b >= 1 and s[-1] == '1':
-        return b*base_b_to_num(new_s, b) + 1
-    elif b >= 2 and s[-1] == '2':
-        return b*base_b_to_num(new_s, b) + 2
-    elif b >= 3 and s[-1] == '3':
-        return b*base_b_to_num(new_s, b) + 3
-    elif b >= 4 and s[-1] == '4':
-        return b*base_b_to_num(new_s, b) + 4
-    elif b >= 5 and s[-1] == '5':
-        return b*base_b_to_num(new_s, b) + 5
-    elif b >= 6 and s[-1] == '6':
-        return b*base_b_to_num(new_s, b) + 6
-    elif b >= 7 and s[-1] == '7':
-        return b*base_b_to_num(new_s, b) + 7
-    elif b >= 8 and s[-1] == '8':
-        return b*base_b_to_num(new_s, b) + 8
-    elif b >= 9 and s[-1] == '9':
-        return b*base_b_to_num(new_s, b) + 9
     else:
-        return b*base_b_to_num(new_s, b) + 0
+        return base_b_to_num(s[0:-1], b) * b + int(s[-1])
 
 
 def base_to_base(b1, b2, s_in_b1):
