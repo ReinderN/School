@@ -100,6 +100,10 @@
     <comp lib="2" loc="(344,43)" name="Text">
       <a name="text" val="Hier kan je een XOR-schakeling bouwen"/>
     </comp>
+    <comp lib="2" loc="(346,353)" name="Text">
+      <a name="font" val="SansSerif plain 36"/>
+      <a name="text" val="Gemaakt door; Bas, Freek, Mike &amp; Reinder"/>
+    </comp>
     <comp lib="2" loc="(362,75)" name="Text">
       <a name="text" val="Je kan de tutorial volgen (in het Help-menu; &quot;tutorial&quot;) of zelf de oplossing bedenken..."/>
     </comp>
@@ -187,6 +191,10 @@
     <comp lib="2" loc="(173,25)" name="Text">
       <a name="font" val="SansSerif plain 12"/>
       <a name="text" val="3 invoerbits:  X,  Y en CarryIn"/>
+    </comp>
+    <comp lib="2" loc="(427,682)" name="Text">
+      <a name="font" val="SansSerif plain 44"/>
+      <a name="text" val="Gemaakt door; Bas, Freek, Mike &amp; Reinder"/>
     </comp>
     <comp lib="2" loc="(612,38)" name="Text">
       <a name="text" val="Hier kan je een FULL-ADDERschakeling bouwen"/>
@@ -355,6 +363,10 @@
     <comp lib="2" loc="(422,30)" name="Text">
       <a name="text" val="Hier kan je een 4-bit-RIPPLE-CARRY-ADDERschakeling bouwen"/>
     </comp>
+    <comp lib="2" loc="(425,493)" name="Text">
+      <a name="font" val="SansSerif plain 44"/>
+      <a name="text" val="Gemaakt door; Bas, Freek, Mike &amp; Reinder"/>
+    </comp>
     <comp lib="2" loc="(954,133)" name="Text">
       <a name="font" val="SansSerif plain 12"/>
       <a name="text" val="8 invoerbits"/>
@@ -498,10 +510,6 @@
       <a name="facing" val="south"/>
       <a name="label" val="Y2"/>
     </comp>
-    <comp lib="2" loc="(1902,251)" name="Text">
-      <a name="font" val="SansSerif plain 36"/>
-      <a name="text" val="Gemaakt door: Freek, Bas, Mike &amp; Reinder"/>
-    </comp>
     <comp lib="2" loc="(2050,728)" name="Text">
       <a name="text" val="minst significante (laagste) uitvoerbit"/>
     </comp>
@@ -513,6 +521,10 @@
     </comp>
     <comp lib="2" loc="(335,789)" name="Text">
       <a name="text" val="See the problem for details on this hint:   Build a 4x1-bit multiplier first!"/>
+    </comp>
+    <comp lib="2" loc="(424,759)" name="Text">
+      <a name="font" val="SansSerif plain 44"/>
+      <a name="text" val="Gemaakt door; Bas, Freek, Mike &amp; Reinder"/>
     </comp>
     <comp lib="2" loc="(450,26)" name="Text">
       <a name="text" val="tweede factor (4 bits)"/>
@@ -675,58 +687,233 @@
     <a name="clabel" val=""/>
     <a name="clabelfont" val="SansSerif bold 16"/>
     <a name="clabelup" val="east"/>
-    <comp lib="0" loc="(200,80)" name="Pin">
+    <comp lib="0" loc="(110,80)" name="Pin">
       <a name="facing" val="south"/>
       <a name="label" val="Y1"/>
     </comp>
-    <comp lib="0" loc="(320,80)" name="Pin">
-      <a name="facing" val="south"/>
-      <a name="label" val="Y0"/>
-    </comp>
-    <comp lib="0" loc="(520,80)" name="Pin">
-      <a name="facing" val="south"/>
-      <a name="label" val="X1"/>
-    </comp>
-    <comp lib="0" loc="(610,80)" name="Pin">
-      <a name="facing" val="south"/>
-      <a name="label" val="X0"/>
-    </comp>
-    <comp lib="0" loc="(690,220)" name="Pin">
+    <comp lib="0" loc="(1120,210)" name="Pin">
       <a name="facing" val="west"/>
       <a name="label" val="Z2"/>
       <a name="output" val="true"/>
     </comp>
-    <comp lib="0" loc="(690,360)" name="Pin">
+    <comp lib="0" loc="(1120,350)" name="Pin">
       <a name="facing" val="west"/>
       <a name="label" val="Z1"/>
       <a name="output" val="true"/>
     </comp>
-    <comp lib="0" loc="(690,500)" name="Pin">
+    <comp lib="0" loc="(1120,490)" name="Pin">
       <a name="facing" val="west"/>
       <a name="label" val="Z0"/>
       <a name="output" val="true"/>
     </comp>
-    <comp lib="0" loc="(690,630)" name="Pin">
+    <comp lib="0" loc="(1120,620)" name="Pin">
       <a name="facing" val="west"/>
       <a name="label" val="Error"/>
       <a name="output" val="true"/>
+    </comp>
+    <comp lib="0" loc="(140,80)" name="Pin">
+      <a name="facing" val="south"/>
+      <a name="label" val="Y0"/>
+    </comp>
+    <comp lib="0" loc="(400,80)" name="Pin">
+      <a name="facing" val="south"/>
+      <a name="label" val="X1"/>
+    </comp>
+    <comp lib="0" loc="(430,80)" name="Pin">
+      <a name="facing" val="south"/>
+      <a name="label" val="X0"/>
     </comp>
     <comp lib="0" loc="(80,80)" name="Pin">
       <a name="facing" val="south"/>
       <a name="label" val="Y2"/>
     </comp>
-    <comp lib="2" loc="(191,31)" name="Text">
-      <a name="text" val="Teller (3 bits: Y2 Y1 Y0)"/>
+    <comp lib="1" loc="(1010,620)" name="OR Gate">
+      <a name="inputs" val="5"/>
     </comp>
-    <comp lib="2" loc="(566,29)" name="Text">
-      <a name="text" val="Noemer (2 bits: X1 X0)"/>
+    <comp lib="1" loc="(1040,620)" name="NOT Gate"/>
+    <comp lib="1" loc="(410,130)" name="NOT Gate">
+      <a name="facing" val="south"/>
     </comp>
-    <comp lib="2" loc="(703,702)" name="Text">
+    <comp lib="1" loc="(440,130)" name="NOT Gate">
+      <a name="facing" val="south"/>
+    </comp>
+    <comp lib="1" loc="(610,200)" name="AND Gate">
+      <a name="inputs" val="5"/>
+    </comp>
+    <comp lib="1" loc="(610,260)" name="AND Gate">
+      <a name="inputs" val="5"/>
+    </comp>
+    <comp lib="1" loc="(610,320)" name="AND Gate">
+      <a name="inputs" val="5"/>
+    </comp>
+    <comp lib="1" loc="(610,440)" name="AND Gate">
+      <a name="inputs" val="5"/>
+    </comp>
+    <comp lib="1" loc="(610,500)" name="AND Gate">
+      <a name="inputs" val="5"/>
+    </comp>
+    <comp lib="1" loc="(610,560)" name="AND Gate">
+      <a name="inputs" val="5"/>
+    </comp>
+    <comp lib="1" loc="(610,700)" name="AND Gate">
+      <a name="inputs" val="5"/>
+    </comp>
+    <comp lib="1" loc="(610,760)" name="AND Gate">
+      <a name="inputs" val="5"/>
+    </comp>
+    <comp lib="1" loc="(610,820)" name="AND Gate">
+      <a name="inputs" val="5"/>
+    </comp>
+    <comp lib="1" loc="(720,670)" name="XOR Gate"/>
+    <comp lib="1" loc="(750,790)" name="NAND Gate"/>
+    <comp lib="1" loc="(800,740)" name="AND Gate">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="1" loc="(850,210)" name="OR Gate">
+      <a name="inputs" val="5"/>
+    </comp>
+    <comp lib="1" loc="(850,350)" name="OR Gate">
+      <a name="inputs" val="5"/>
+    </comp>
+    <comp lib="1" loc="(850,490)" name="OR Gate">
+      <a name="inputs" val="5"/>
+    </comp>
+    <comp lib="2" loc="(1133,692)" name="Text">
       <a name="text" val="Quotiënt (4 bits: Z2 Z1 Z0 en Error)"/>
     </comp>
-    <comp lib="2" loc="(805,62)" name="Text">
+    <comp lib="2" loc="(190,32)" name="Text">
+      <a name="text" val="Teller (3 bits: Y2 Y1 Y0)"/>
+    </comp>
+    <comp lib="2" loc="(348,890)" name="Text">
+      <a name="font" val="SansSerif plain 36"/>
+      <a name="text" val="Gemaakt door; Bas, Freek, Mike &amp; Reinder"/>
+    </comp>
+    <comp lib="2" loc="(446,29)" name="Text">
+      <a name="text" val="Noemer (2 bits: X1 X0)"/>
+    </comp>
+    <comp lib="2" loc="(685,62)" name="Text">
       <a name="text" val="3-bij-2-bit-DELINGSschakeling"/>
     </comp>
+    <wire from="(1040,620)" to="(1120,620)"/>
+    <wire from="(110,250)" to="(110,560)"/>
+    <wire from="(110,250)" to="(560,250)"/>
+    <wire from="(110,560)" to="(110,760)"/>
+    <wire from="(110,560)" to="(560,560)"/>
+    <wire from="(110,760)" to="(110,830)"/>
+    <wire from="(110,760)" to="(560,760)"/>
+    <wire from="(110,80)" to="(110,250)"/>
+    <wire from="(110,830)" to="(560,830)"/>
+    <wire from="(140,310)" to="(140,820)"/>
+    <wire from="(140,310)" to="(560,310)"/>
+    <wire from="(140,80)" to="(140,310)"/>
+    <wire from="(140,820)" to="(560,820)"/>
+    <wire from="(400,430)" to="(400,490)"/>
+    <wire from="(400,430)" to="(560,430)"/>
+    <wire from="(400,490)" to="(400,550)"/>
+    <wire from="(400,490)" to="(560,490)"/>
+    <wire from="(400,550)" to="(400,690)"/>
+    <wire from="(400,550)" to="(560,550)"/>
+    <wire from="(400,690)" to="(400,750)"/>
+    <wire from="(400,690)" to="(560,690)"/>
+    <wire from="(400,750)" to="(400,810)"/>
+    <wire from="(400,750)" to="(560,750)"/>
+    <wire from="(400,80)" to="(400,90)"/>
+    <wire from="(400,810)" to="(560,810)"/>
+    <wire from="(400,90)" to="(400,430)"/>
+    <wire from="(400,90)" to="(410,90)"/>
+    <wire from="(410,130)" to="(410,200)"/>
+    <wire from="(410,200)" to="(410,260)"/>
+    <wire from="(410,200)" to="(560,200)"/>
+    <wire from="(410,260)" to="(410,320)"/>
+    <wire from="(410,260)" to="(560,260)"/>
+    <wire from="(410,320)" to="(560,320)"/>
+    <wire from="(410,90)" to="(410,100)"/>
+    <wire from="(430,180)" to="(430,240)"/>
+    <wire from="(430,180)" to="(560,180)"/>
+    <wire from="(430,240)" to="(430,300)"/>
+    <wire from="(430,240)" to="(560,240)"/>
+    <wire from="(430,300)" to="(430,680)"/>
+    <wire from="(430,300)" to="(560,300)"/>
+    <wire from="(430,680)" to="(430,740)"/>
+    <wire from="(430,680)" to="(560,680)"/>
+    <wire from="(430,740)" to="(430,800)"/>
+    <wire from="(430,740)" to="(560,740)"/>
+    <wire from="(430,80)" to="(430,90)"/>
+    <wire from="(430,800)" to="(560,800)"/>
+    <wire from="(430,90)" to="(430,180)"/>
+    <wire from="(430,90)" to="(440,90)"/>
+    <wire from="(440,130)" to="(440,420)"/>
+    <wire from="(440,420)" to="(440,480)"/>
+    <wire from="(440,420)" to="(560,420)"/>
+    <wire from="(440,480)" to="(440,540)"/>
+    <wire from="(440,480)" to="(560,480)"/>
+    <wire from="(440,540)" to="(560,540)"/>
+    <wire from="(440,90)" to="(440,100)"/>
+    <wire from="(560,760)" to="(560,770)"/>
+    <wire from="(610,200)" to="(790,200)"/>
+    <wire from="(610,260)" to="(790,260)"/>
+    <wire from="(610,320)" to="(740,320)"/>
+    <wire from="(610,500)" to="(770,500)"/>
+    <wire from="(610,560)" to="(790,560)"/>
+    <wire from="(610,700)" to="(630,700)"/>
+    <wire from="(610,760)" to="(660,760)"/>
+    <wire from="(610,820)" to="(660,820)"/>
+    <wire from="(630,650)" to="(630,700)"/>
+    <wire from="(630,650)" to="(660,650)"/>
+    <wire from="(660,690)" to="(660,760)"/>
+    <wire from="(660,760)" to="(680,760)"/>
+    <wire from="(660,820)" to="(660,840)"/>
+    <wire from="(660,820)" to="(680,820)"/>
+    <wire from="(660,840)" to="(820,840)"/>
+    <wire from="(680,760)" to="(680,770)"/>
+    <wire from="(680,760)" to="(750,760)"/>
+    <wire from="(680,770)" to="(690,770)"/>
+    <wire from="(680,810)" to="(680,820)"/>
+    <wire from="(680,810)" to="(690,810)"/>
+    <wire from="(720,670)" to="(730,670)"/>
+    <wire from="(730,510)" to="(730,670)"/>
+    <wire from="(730,510)" to="(760,510)"/>
+    <wire from="(740,320)" to="(740,390)"/>
+    <wire from="(740,390)" to="(800,390)"/>
+    <wire from="(750,350)" to="(750,760)"/>
+    <wire from="(750,350)" to="(800,350)"/>
+    <wire from="(750,790)" to="(780,790)"/>
+    <wire from="(760,490)" to="(760,510)"/>
+    <wire from="(760,490)" to="(800,490)"/>
+    <wire from="(770,340)" to="(770,500)"/>
+    <wire from="(770,340)" to="(800,340)"/>
+    <wire from="(780,510)" to="(780,530)"/>
+    <wire from="(780,510)" to="(800,510)"/>
+    <wire from="(780,530)" to="(800,530)"/>
+    <wire from="(790,190)" to="(790,200)"/>
+    <wire from="(790,190)" to="(800,190)"/>
+    <wire from="(790,260)" to="(790,330)"/>
+    <wire from="(790,330)" to="(800,330)"/>
+    <wire from="(790,480)" to="(790,560)"/>
+    <wire from="(790,480)" to="(800,480)"/>
+    <wire from="(80,190)" to="(560,190)"/>
+    <wire from="(80,190)" to="(80,510)"/>
+    <wire from="(80,510)" to="(560,510)"/>
+    <wire from="(80,510)" to="(80,700)"/>
+    <wire from="(80,700)" to="(560,700)"/>
+    <wire from="(80,700)" to="(80,780)"/>
+    <wire from="(80,780)" to="(560,780)"/>
+    <wire from="(80,80)" to="(80,190)"/>
+    <wire from="(800,390)" to="(800,470)"/>
+    <wire from="(800,530)" to="(800,740)"/>
+    <wire from="(820,790)" to="(820,840)"/>
+    <wire from="(850,210)" to="(900,210)"/>
+    <wire from="(850,350)" to="(920,350)"/>
+    <wire from="(850,490)" to="(930,490)"/>
+    <wire from="(900,210)" to="(1120,210)"/>
+    <wire from="(900,210)" to="(900,600)"/>
+    <wire from="(900,600)" to="(960,600)"/>
+    <wire from="(920,350)" to="(1120,350)"/>
+    <wire from="(920,350)" to="(920,610)"/>
+    <wire from="(920,610)" to="(960,610)"/>
+    <wire from="(930,490)" to="(1120,490)"/>
+    <wire from="(930,490)" to="(930,620)"/>
+    <wire from="(930,620)" to="(960,620)"/>
   </circuit>
   <circuit name="Een_2bit_decoder">
     <a name="appearance" val="logisim_evolution"/>
@@ -820,6 +1007,10 @@
     </comp>
     <comp lib="1" loc="(380,420)" name="AND Gate">
       <a name="inputs" val="5"/>
+    </comp>
+    <comp lib="2" loc="(424,507)" name="Text">
+      <a name="font" val="SansSerif plain 44"/>
+      <a name="text" val="Gemaakt door; Bas, Freek, Mike &amp; Reinder"/>
     </comp>
     <wire from="(120,240)" to="(330,240)"/>
     <wire from="(120,60)" to="(120,240)"/>
