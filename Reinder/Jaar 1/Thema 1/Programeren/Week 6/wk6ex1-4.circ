@@ -498,6 +498,10 @@
       <a name="facing" val="south"/>
       <a name="label" val="Y2"/>
     </comp>
+    <comp lib="2" loc="(1902,251)" name="Text">
+      <a name="font" val="SansSerif plain 36"/>
+      <a name="text" val="Gemaakt door: Freek, Bas, Mike &amp; Reinder"/>
+    </comp>
     <comp lib="2" loc="(2050,728)" name="Text">
       <a name="text" val="minst significante (laagste) uitvoerbit"/>
     </comp>
