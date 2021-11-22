@@ -1,0 +1,11 @@
+# Voorbeeld1 is an voorbeeldprogramma dat
+#   1) de gebruiker om twee getallen vraagt
+#   2) het product van de invoer berekent
+#   3) het resultaat afdrukt (met write)
+#   4) stopt
+
+00 read r1          # lees getal van gebruiker in r1
+01 read r2          # ook voor r2
+02 mul r3 r1 r2     # r3 = r1 * r2
+03 write r3         # druk inhoud van r3 af
+04 halt             # stop.

@@ -1,0 +1,12 @@
+# wk7ex1b.hmmm wordt een random-number generator
+#
+# Naam:
+
+# Practicumopgave #2: Breid deze code uit zodat dit je random-number generator wordt:
+#   (Merk op: dit is begincode die de invoer op de juiste manier verwerkt...)
+
+00 read r1    # voer a in
+01 read r2    # voer c in
+02 read r3    # voer m in
+03 read r4    # voer X_0 in
+04 read r5    # voer N in
