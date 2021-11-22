@@ -7,8 +7,31 @@
 # Dit is een voorbeeld; je moet deze code vervangen...
 #
 
-00 read r1          # lees getal van gebruiker in r1
-01 read r2          # ook voor r2
-02 mul r3 r1 r2     # r3 = r1 * r2
-03 write r3         # druk inhoud van r3 af
-04 halt             # stop.
+# Dit is de recursieve faculteit (uit het college):
+
+00 read  r1             # Lees gebruikersinvoer in in r1
+01 setn  r15 42         # Initialiseer de stack pointer
+02 nop                  # Ruimte voor uitbreiding (zie wk7ex4!)
+03 calln r14 7          # Roep de faculteitsfunctie aan (op regel 7)
+04 nop                  # Ruimte voor uitbreiding (zie wk7ex4!)
+05 write r13            # Druk uitvoer af op het scherm
+06 halt                 # Klaar!
+
+# +++ Faculteitsfunctie +++
+# Basisgeval (regels 7-10)
+07 jnezn r1  11         # de test voor het basisgeval: is de invoer r1 != 0 ?
+08 setn  r13 1          # Als r1 0 is, dan is het resultaat, r13, 1
+09 nop                  # Ruimte voor uitbreiding (of om iets af te drukken!)
+10 jumpr r14            # Geef het resultaat, r13, terug aan het regelnummer in r14
+
+# Recursief geval (regels 11-20)
+11 pushr r1  r15        # Bewaar (push) r1 op de stack (op positie r15)
+12 pushr r14 r15        # Bewaar (push) r14 op de stack 
+13 addn  r1 -1          # Bepaal N-1 en zet het in r1
+14 nop                  # Ruimte voor uitbreiding (of om iets af te drukken!)
+15 calln r14 7          # Vraag nu de faculteit van N-1  (Wow!)
+16 nop                  # Ruimte voor uitbreiding (of om iets af te drukken!)
+17 popr  r14 r15        # Verkrijg (pop) r14 van de stack
+18 popr  r1  r15        # Verkrijg (pop) r1 van de stack
+19 mul   r13 r1 r13     # Bereken r13 = N * fac(N-1)   (Wow!)
+20 jumpr r14            # Klaar! Geef r13 terug naar de aanroeper in r14
