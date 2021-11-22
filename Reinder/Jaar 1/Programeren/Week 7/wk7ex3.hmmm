@@ -1,14 +1,21 @@
 # Week 7 Opgave 3
 #
-# Naam:
+# Namen: L.P.R. Noordmans, B. Mellens, F.M. van Witzenburg
 #
 # Hmmm...
 #
 # Dit is een voorbeeld; je moet deze code vervangen...
 #
 
-00 read r1          # lees getal van gebruiker in r1
-01 read r2          # ook voor r2
-02 mul r3 r1 r2     # r3 = r1 * r2
-03 write r3         # druk inhoud van r3 af
-04 halt             # stop.
+00 read r1 # lees getal van gebruiker in r1
+01 setn r2 1 # zet r2 op 1
+02 write r2 # schrijft r2
+03 addn r1 -1 # haalt 1 van r1 af vanwege een write
+04 jeqzn r1 11 # als r1 0 is ga naar 11
+05 add r3 r2 r3 # voeg r2 samen met r3 in r3
+06 write r3 # schrijft r3
+07 addn r1 -1 # haalt 1 van r1 af vanwege een write
+08 jeqzn r1 11 # als r1 0 is ga naar 11
+09 add r2 r3 r2 # voeg r3 samen met r2 in r2
+10 jgtzn r1 02 # als r1 niet nul is ga naar 02
+11 halt # stopt het programma

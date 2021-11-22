@@ -2,7 +2,7 @@
 # wk7ex1c.py - uniekheid controleren  (voor de random-number generator in Hmmm)
 #    De functie test(s) staat hier al in (onderaan).
 #
-# Naam:
+# Namen: L.P.R. Noordmans, B. Mellens, F.M. van Witzenburg
 #
 # Je plakt je 100 getallen in deze triple-quoted string:
 NUMBERS = """
@@ -29,9 +29,9 @@ def unique(L):
 
 def test(s):
     """test accepts a triple-quoted string, s,
-       containing one number per line. Then, test
-       returns True if those numbers are all unique
-       (or if s is empty); otherwise it returns False
+        containing one number per line. Then, test
+        returns True if those numbers are all unique
+        (or if s is empty); otherwise it returns False
     """
     s = s.strip()                 # haal alle spaties aan het begin en eind van s weg
     list_of_strings = s.split()   # splits s op elke spatie en nieuwe regel

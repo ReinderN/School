@@ -1,14 +1,18 @@
 # Week 7 Opgave 2
 #
-# Naam:
-#
-# Hmmm...
-#
-# Dit is een voorbeeld; je moet deze code vervangen...
+# Namen: L.P.R. Noordmans, B. Mellens, F.M. van Witzenburg
 #
 
-00 read r1          # lees getal van gebruiker in r1
-01 read r2          # ook voor r2
-02 mul r3 r1 r2     # r3 = r1 * r2
-03 write r3         # druk inhoud van r3 af
-04 halt             # stop.
+00 read r1 # getal 1 (base) 
+01 read r2 # getal 2 (de macht)
+02 jeqzn r2 11 # als r2 nul is spring naar rij 11 
+03 addn r2 -1 # haalt 1 af van r2
+04 jeqzn r2 09 # als r2 nul is spring naar rij 09
+05 copy r3 r1 # kopieert r1 naar regel 3
+06 mul r1 r1 r3 # vermeningvuldigt r1 keer r1 en geeft r3
+07 addn r2 -1 # voegt r2
+08 jgtzn r2 06 # als r2 nul is spring naar regel is 
+09 write r1 # geeft r1
+10 halt # stopt het programma
+11 setn r1 1 # stelt r1
+12 jumpn 08 # zet de programmacounter op 08

@@ -1,12 +1,20 @@
 # wk7ex1b.hmmm wordt een random-number generator
 #
-# Naam:
+# Namen: L.P.R. Noordmans, B. Mellens, F.M. van Witzenburg
 
 # Practicumopgave #2: Breid deze code uit zodat dit je random-number generator wordt:
 #   (Merk op: dit is begincode die de invoer op de juiste manier verwerkt...)
 
-00 read r1    # voer a in
-01 read r2    # voer c in
-02 read r3    # voer m in
-03 read r4    # voer X_0 in
-04 read r5    # voer N in
+00 read r1 # voer a in
+01 read r2 # voer c in
+02 read r3 # voer m in
+03 read r4 # voer X_0 in
+04 read r5 # voer N in
+05 jeqzn r5 11 # if r5 == 0 jump
+06 mul r6 r1 r4 # r6 = r1 * r4
+07 add r6 r6 r2 # r6 = r6 + r2
+08 mod r4 r6 r3 # r4 = r6 % r3
+09 write r4 # drukt waarde van r4 af
+10 addn r5 -1 # haalt 1 weg van r5 vanwege 1 cycle
+11 jgtzn r5 06 # controleerd of r5 niet 0 of kleiner is
+12 halt # stopt het programma
