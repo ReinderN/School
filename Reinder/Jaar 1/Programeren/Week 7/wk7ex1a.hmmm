@@ -1,0 +1,19 @@
+# wk7ex1a.hmmm is een voorbeeldprogramma dat
+#   1) de gebruiker om invoer vraagt
+#   2) doortelt vanaf dat getal
+#   3) eeuwig door blijft gaan...
+#
+# Naam:
+#
+
+# Practicumopgave #1: Bouw dit programma om naar "aftellen tot de derde macht"
+# Zie de practicumbeschrijving voor details
+
+00 read r1          # lees getal van de gebruiker in r1
+01 mul r2 r1 r1     # doe r1 keer zichzelf
+02 mul r3 r2 r2     #doe het resultaat van r1 keer zichzelf keer r1
+03 jeqzn r3 07    #checkt of r3 nul is en als het nul is jumped het naar lijn 07
+04 write r3        # druk de waarde van r1 af
+05 addn r3 -1        # voeg 1 toe aan r1
+06 jumpn 03         # spring naar regel 01
+07 halt             # stopt nooit! [gebruik ctrl-c]

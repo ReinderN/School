@@ -1,0 +1,14 @@
+# Week 7 Opgave 2
+#
+# Naam:
+#
+# Hmmm...
+#
+# Dit is een voorbeeld; je moet deze code vervangen...
+#
+
+00 read r1          # lees getal van gebruiker in r1
+01 read r2          # ook voor r2
+02 mul r3 r1 r2     # r3 = r1 * r2
+03 write r3         # druk inhoud van r3 af
+04 halt             # stop.
