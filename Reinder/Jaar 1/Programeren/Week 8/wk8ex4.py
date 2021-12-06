@@ -50,10 +50,17 @@ assert next(1211) == 111221
 
 
 def read_it(n):
-    current = 1
-    for x in range(n):
-        print(current)
-        current = next(current)
+    '''
+    Deze functie gaat telt vanaf 1 door n aantal Conway nummers in de rij van Conway
+
+    n: Int
+    output: None
+    '''
+    current = 1  # begint altijd bij 1
+    for x in range(n):  # gaat door alles in n heen
+        print(current)  # print het huidige cijfer
+        current = next(current)  # berekent het volgende cijfer
 
 
+# print test voor read_it
 read_it(6)
