@@ -90,5 +90,3 @@ class PNGImage:
         # we reverse the rows so that the y direction
         # increases upwards...
         save_rgb(self.image_data[::-1], filename)
-
-
