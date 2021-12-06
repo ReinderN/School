@@ -24,11 +24,12 @@ def test_fun():
             if c == r:
                 im.plot_point(c, r, (255, 0, 0))
             else:
-                im.plot_point( c, r, (255,0,0))
+                im.plot_point(c, r, (255, 0, 0))
 
     im.save_file()
 
 # zet je functies van Practicum 8 hieronder neer:
+
 
 def mult(c, n):
     """ de functie mult maakt gebruik van c en vermenigdvuldigd dat  met een postieve interger N.
@@ -85,6 +86,7 @@ def test():
     # we hebben door alle pixels gelust; nu schrijven we het bestand
 
     image.save_file()
+
 
 def example():
     """Laat zien hoe een programma een foto importeert en een pixel versie terug geeft.
