@@ -3,7 +3,7 @@
 
 # count_evens uit List-2
 def count_evens(nums):
-    """Geeft alle even getallen terug uit list-2"""
+    """Geeft terug hoevaak er een even gatal in nums voorkomt"""
     total = 0
     for x in nums:
         if x % 2 == 0:
@@ -14,25 +14,27 @@ def count_evens(nums):
 
 
 def sum13(nums):
-    """" Telt alle getallen uit list 2. """
-    sum = 0
-    next = False
+    """Telt alle getallen uit de lijst nums maar neemt de 13 niet mee in de telling"""
+    total = 0
+    next13 = False
     for x in nums:
-        if next == False:
+        if next13 == False:
             if x == 13:
-                sum += 0
-                next = True
+                total += 0
+                next13 = True
             else:
-                sum += x
+                total += x
+        elif x == 13:
+            next13 = True
         else:
-            next = False
-    return sum
+            next13 = False
+    return total
 
 # big_diff uit List-2
 
 
 def big_diff(nums):
-    """Geeft de grootste veschril tussen 2 getallen terug uit list 2. """
+    """Geeft het verschil tussen het grootste getal en het kleinste getal uit nums"""
     biggest = 0
     smallest = 999999
     for x in nums:
@@ -47,25 +49,25 @@ def big_diff(nums):
 
 
 def sum67(nums):
-    """Geeft alle getallen uit list 2 weer."""
-    sum = 0
+    """Telt alles uit een lijst en stopt met tellen als het een 6 tegen komt en gaat door met tellen als er een 7 voorkomt"""
+    total = 0
     geweest = False
     for x in nums:
         if geweest == False:
             if x == 6:
                 geweest = True
             else:
-                sum += x
+                total += x
         else:
             if x == 7:
                 geweest = False
-    return sum
+    return total
 
 # centered_average uit list-2
 
 
 def centered_average(nums):
-    """Geeft een mediaan van de getallen uit list 2 weer."""
+    """Geeft het gemiddelde van de lijst terug zonder het grootste en het kleinste getal"""
     biggest = 0
     smallest = 999999
     for x in nums:
@@ -105,17 +107,17 @@ assert count_evens([4, 123, 2132, 345, 456]) == 3
 assert count_evens([2314, 234, 456, 1235, 332, 436]) == 5
 assert count_evens([196, 27634, 5433, 345, 1843, 324]) == 3
 
-assert sum13([4, 123, 2132, 345, 456]) == 3060
-assert sum13([2314, 234, 456, 1235, 332, 436]) == 5007
-assert sum13([196, 27634, 5433, 345, 1843, 324]) == 35775
+assert sum13([4, 123, 2132, 13, 13, 345, 456]) == 3060 - 345
+assert sum13([2314, 234, 456, 1235, 13, 332, 436]) == 5007 - 332
+assert sum13([196, 27634, 13, 5433, 345, 13, 1843, 324]) == 35775 - 5433-1843
 
 assert big_diff([4, 123, 2132, 345, 456]) == 2128
 assert big_diff([2314, 234, 456, 1235, 332, 436]) == 2080
 assert big_diff([196, 27634, 5433, 345, 1843, 324]) == 27438
 
-assert sum67([4, 123, 2132, 345, 456]) == 3060
-assert sum67([2314, 234, 456, 1235, 332, 436]) == 5007
-assert sum67([196, 27634, 5433, 345, 1843, 324]) == 35775
+assert sum67([4, 123, 2132, 6, 345, 7, 456]) == 3060-345
+assert sum67([2314, 234, 456, 6, 1235, 332, 7, 436]) == 5007-1235-332
+assert sum67([196, 27634, 6, 5433, 345, 1843, 7, 324]) == 35775-5433-345-1843
 
 assert centered_average([4, 123, 2132, 345, 456]) == 308
 assert centered_average([2314, 234, 456, 1235, 332, 436]) == 614
