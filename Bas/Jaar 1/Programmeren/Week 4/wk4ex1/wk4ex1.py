@@ -82,8 +82,7 @@ def randomize(x, chance_of_replacing):
     r = random.uniform(0, 1)
     if r < chance_of_replacing:
         return random.uniform(-32768, 32767)
-    else:
-        return x
+    return x
 
 
 # Te schrijven functie #5: replace_some

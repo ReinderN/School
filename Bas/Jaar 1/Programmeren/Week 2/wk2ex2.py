@@ -18,8 +18,7 @@ def checkends(s):
     '''Kijkt of eerste en laatste letter van imput gelijk aan elkaar zijn'''
     if s[0] == s[-1]:
         return True
-    else:
-        return False
+    return False
 
 def flipside(s):
     '''Split imput doormidden en plakt deel 1 achter deel 2'''

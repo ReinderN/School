@@ -118,10 +118,9 @@ def unique(L):
     """
     if len(L) == 0:
         return True
-    elif L[0] in L[1:]:
+    if L[0] in L[1:]:
         return False
-    else:
-        return unique(L[1:])
+    return unique(L[1:])
 
 
 def test(s):

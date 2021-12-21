@@ -24,9 +24,8 @@ def rwpos(start, nsteps):
     print(start)
     if nsteps == 0:
         return start
-    else:
-        start += rs()
-        return rwpos(start, nsteps-1)
+    start += rs()
+    return rwpos(start, nsteps-1)
 
 def rwsteps(start, low, hi):
     """rwpsteps needs a starting postion and then takes a random amount of steps between low and high
@@ -38,13 +37,12 @@ def rwsteps(start, low, hi):
     """
     if low < 0:
         return 0
-    else:
-        steps = randint(low, hi)
-        step = rs()
-        start += step
-        print("|","_"*(5+step), "😴", "_"*(5-step),"|")
-        steps -= 1
-        return 1 + rwsteps(start, steps, steps)
+    steps = randint(low, hi)
+    step = rs()
+    start += step
+    print("|","_"*(5+step), "😴", "_"*(5-step),"|")
+    steps -= 1
+    return 1 + rwsteps(start, steps, steps)
 
 def rwpos_plain(start, nsteps):
     """rwpos gets a starting position and the amount of steps the bot needs to take to get a final position
@@ -56,9 +54,8 @@ def rwpos_plain(start, nsteps):
     """
     if nsteps == 0:
         return start
-    else:
-        start += rs()
-        return rwpos_plain(start, nsteps-1)
+    start += rs()
+    return rwpos_plain(start, nsteps-1)
 
 def ave_signed_displacement(numtrials):
     lc = [rwpos_plain(0,100) for x in range(numtrials)]

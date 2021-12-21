@@ -134,20 +134,18 @@ def blsort(L):
 def gensort(L):
     if L == []:
         return []
-    else:
-        minimum = min(L)
-        loc = L.index(minimum)
-        L.pop(loc)
-        return [minimum] + gensort(L)
+    minimum = min(L)
+    loc = L.index(minimum)
+    L.pop(loc)
+    return [minimum] + gensort(L)
 
 def calc(s,t):
     if s == "":
         return 0
-    elif s[0] in t:
+    if s[0] in t:
         t.pop(t.index(s[0]))
         return 1 + calc(s[1:], t)
-    else:
-        return 0 + calc(s[1:], t)
+    return 0 + calc(s[1:], t)
 
 def lingo(s,t):
     tL = [x for x in t]
@@ -157,17 +155,15 @@ def lingo(s,t):
 def exact_change(w, L):
     if L == [] and w == 0:
         return True
-    elif L == []:
+    if L == []:
         return False
-    elif w == sum(L):
+    if w == sum(L):
         return True
-    else:
-        useit = exact_change(w, L[1:])
-        loseit = exact_change(w, L[:-1])
-        if useit or loseit:
-            return True
-        else:
-            return False
+    useit = exact_change(w, L[1:])
+    loseit = exact_change(w, L[:-1])
+    if useit or loseit:
+        return True
+    return False
 
 def lcs(s, t):
     """
@@ -180,8 +176,7 @@ def lcs(s, t):
     result2 = lcs(s, t[1:])
     if len(result1) > len(result2):
         return result1
-    else:
-        return result2
+    return result2
 
 assert exact_change(42, [25, 1, 25, 10, 5, 1]) == True
 assert exact_change(42, [25, 1, 25, 10, 5]) == False
