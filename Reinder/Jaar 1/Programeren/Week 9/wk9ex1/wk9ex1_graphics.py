@@ -66,7 +66,6 @@ def show_good_2():
         Allows for pausing with "p", resuming with "Enter"/"Return",
         and automatically pauses the game if the board stops changing
         or becomes blank."""
-    global board
     global running
     screen.onkey(game_pause, "p")
     screen.onkey(game_resume, "Return")
