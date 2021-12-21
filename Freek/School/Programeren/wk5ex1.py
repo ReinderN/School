@@ -14,9 +14,9 @@ def is_odd(n):
       return  True
     else:
       return False
-assert is_odd(42) == False
-assert is_odd(43) == True
-assert is_odd(44) == False
+assert is_odd(42) is False
+assert is_odd(43) is True
+assert is_odd(44) is False
   # Functie num_to_binary(n) ->
 
 def num_to_binary(n):

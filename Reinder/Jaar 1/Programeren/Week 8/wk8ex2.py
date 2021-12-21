@@ -18,7 +18,7 @@ def sum13(nums):
     total = 0
     next13 = False
     for x in nums:
-        if next13 == False:
+        if next13 is False:
             if x == 13:
                 total += 0
                 next13 = True
@@ -53,7 +53,7 @@ def sum67(nums):
     total = 0
     geweest = False
     for x in nums:
-        if geweest == False:
+        if geweest is False:
             if x == 6:
                 geweest = True
             else:
@@ -123,9 +123,9 @@ assert centered_average([4, 123, 2132, 345, 456]) == 308
 assert centered_average([2314, 234, 456, 1235, 332, 436]) == 614
 assert centered_average([196, 27634, 5433, 345, 1843, 324]) == 1986
 
-assert has22([4, 123, 2132, 345, 456]) == False
-assert has22([2314, 2, 2, 1235, 22, 436]) == True
-assert has22([196, 27634, 5433, 345, 1843, 324]) == False
+assert has22([4, 123, 2132, 345, 456]) is False
+assert has22([2314, 2, 2, 1235, 22, 436]) is True
+assert has22([196, 27634, 5433, 345, 1843, 324]) is False
 
 assert double_char('abc') == 'aabbcc'
 assert double_char('AaBbCc') == 'AAaaBBbbCCcc'
