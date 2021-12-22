@@ -78,8 +78,7 @@ class Date:
                 if self.day < d2.day:
                     return True
                 return False
-            else:
-                return False
+            return False
         else:
             return False
 
