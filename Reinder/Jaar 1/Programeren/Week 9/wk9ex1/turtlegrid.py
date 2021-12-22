@@ -11,8 +11,6 @@ current_ys = []
 
 def get_pos(mouse_x, mouse_y):
     """Returns the row and column clicked by the mouse in a tuple."""
-    global current_xs
-    global current_ys
     global col
     global row
 
@@ -38,13 +36,11 @@ clr_d = {0: "white", 1: "red", 2: "blue", 3: "green", 4: "gold"}
 
 
 def set_color(key, color):
-    global clr_d
     clr_d[key] = color
     return
 
 
 def color_lookup(clr):
-    global clr_d
     if clr in clr_d:
         return clr_d[clr]
     return clr
