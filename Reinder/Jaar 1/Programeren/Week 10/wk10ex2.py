@@ -154,7 +154,7 @@ class Board:
         '''deze functie controleerd of het bord vol is'''
         for col in range(0, self.width):
             result = self.allows_move(col)
-            if result == False:
+            if result is False:
                 return True
         return False
 
