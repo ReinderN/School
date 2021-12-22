@@ -14,9 +14,12 @@ def is_odd(n):
       return  True
     else:
       return False
-assert is_odd(42) is False
-assert is_odd(43) is True
-assert is_odd(44) is False
+if is_odd(42) is not False:
+    raise AssertionError
+if is_odd(43) is not True:
+    raise AssertionError
+if is_odd(44) is not False:
+    raise AssertionError
   # Functie num_to_binary(n) ->
 
 def num_to_binary(n):
@@ -30,10 +33,14 @@ def num_to_binary(n):
      return num_to_binary(n // 2) + "1"
    else:
      return num_to_binary(n // 2) + "0"
-assert num_to_binary(0) == ""
-assert num_to_binary(42) == "101010"
-assert num_to_binary(5) == '101'
-assert num_to_binary(12) == '1100'
+if num_to_binary(0) != "":
+    raise AssertionError
+if num_to_binary(42) != "101010":
+    raise AssertionError
+if num_to_binary(5) != '101':
+    raise AssertionError
+if num_to_binary(12) != '1100':
+    raise AssertionError
   # functie binary_to_num(s) ->
 def binary_to_num(s):
    """binary_to_num changes a binary number to a integer.
@@ -46,10 +53,14 @@ def binary_to_num(s):
       return 2*binary_to_num(s[:-1]) + 1
    else: # laatste cijfer moet een '0' zijn
      return 2*binary_to_num(s[:-1]) + 0
-assert binary_to_num('') == 0
-assert binary_to_num("101") == 5
-assert binary_to_num("101010") == 42
-assert binary_to_num("100") == 4
+if binary_to_num('') != 0:
+    raise AssertionError
+if binary_to_num("101") != 5:
+    raise AssertionError
+if binary_to_num("101010") != 42:
+    raise AssertionError
+if binary_to_num("100") != 4:
+    raise AssertionError
   # Functie increment(s) ->
 def increment(s):
    """increment accepts a binairy string with 0's and 1's
@@ -62,10 +73,14 @@ def increment(s):
    y = num_to_binary(x)
    len_y = len(y)
    return ('0'* (8-len_y)) + y
-assert increment("00000000") == '00000001'
-assert increment("00000001") == '00000010'
-assert increment("00000111") == '00001000'
-assert increment("11111111") == '00000000'
+if increment("00000000") != '00000001':
+    raise AssertionError
+if increment("00000001") != '00000010':
+    raise AssertionError
+if increment("00000111") != '00001000':
+    raise AssertionError
+if increment("11111111") != '00000000':
+    raise AssertionError
   # Functie count(s, n) ->
 def count(s, n):
    """count accepts a binairy string and muliplies is n times from start
@@ -91,9 +106,12 @@ def num_to_ternary(n):
     return num_to_ternary(n // 3) + "2"
    else:
     return num_to_ternary(n // 3) + "0"
-assert num_to_ternary(42) == '1120'
-assert num_to_ternary(4242) == '12211010'
-assert num_to_ternary(0) == ''
+if num_to_ternary(42) != '1120':
+    raise AssertionError
+if num_to_ternary(4242) != '12211010':
+    raise AssertionError
+if num_to_ternary(0) != '':
+    raise AssertionError
   # Functie ternary_to_num(s) ->
 def ternary_to_num(s):
    """binary_to_num changes a binary number to a integer.
@@ -108,9 +126,12 @@ def ternary_to_num(s):
     return 3*ternary_to_num(s[:-1]) + 1
    else: # laatste cijfer moet een '0' zijn
     return 3*ternary_to_num(s[:-1]) + 0
-assert ternary_to_num("1120") == 42
-assert ternary_to_num("12211010") == 4242
-assert ternary_to_num("10") == 3
+if ternary_to_num("1120") != 42:
+    raise AssertionError
+if ternary_to_num("12211010") != 4242:
+    raise AssertionError
+if ternary_to_num("10") != 3:
+    raise AssertionError
   # Functie balanced_ternary_to_num(s) ->
 def balanced_ternary_to_num(s):
    """returns a decimal value equal to balanced ternary string s.
@@ -123,9 +144,12 @@ def balanced_ternary_to_num(s):
     return 3 * balanced_ternary_to_num(s[:-1]) + 1
    elif s[-1] == "0":
     return 3 * balanced_ternary_to_num(s[:-1]) + 0
-assert balanced_ternary_to_num("+---0") == 42
-assert balanced_ternary_to_num("++-0+") == 100
-assert balanced_ternary_to_num("+0--0") == 69
+if balanced_ternary_to_num("+---0") != 42:
+    raise AssertionError
+if balanced_ternary_to_num("++-0+") != 100:
+    raise AssertionError
+if balanced_ternary_to_num("+0--0") != 69:
+    raise AssertionError
   # Functie num_to_balanced_ternary(n) ->
 def num_to_balanced_ternary(n):
    """returns a balanced ternary string that is equal to value n.
@@ -138,7 +162,10 @@ def num_to_balanced_ternary(n):
     return num_to_balanced_ternary(n // 3) + '+'
    elif n % 3 == 2:
     return num_to_balanced_ternary((n // 3) + 1) + '-'
-assert num_to_balanced_ternary(42) == '+---0'
-assert num_to_balanced_ternary(100) == '++-0+'
-assert num_to_balanced_ternary(69) == '+0--0'
+if num_to_balanced_ternary(42) != '+---0':
+    raise AssertionError
+if num_to_balanced_ternary(100) != '++-0+':
+    raise AssertionError
+if num_to_balanced_ternary(69) != '+0--0':
+    raise AssertionError
 
