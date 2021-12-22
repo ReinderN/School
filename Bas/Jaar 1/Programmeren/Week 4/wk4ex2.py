@@ -148,7 +148,7 @@ def calc(s,t):
     return 0 + calc(s[1:], t)
 
 def lingo(s,t):
-    tL = [x for x in t]
+    tL = list(t)
     points = calc(s, tL)
     return points
 

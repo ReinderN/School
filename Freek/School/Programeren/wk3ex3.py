@@ -51,9 +51,12 @@ def lc_fdiv(n):
     return [x / 2 for x in range(n)]
 
 
-assert lc_mult(4) == [0, 2, 4, 6]
-assert lc_idiv(4) == [0.0, 0.0, 1.0, 1.0]
-assert lc_fdiv(4) == [0.0, 0.5, 1.0, 1.5]
+if lc_mult(4) != [0, 2, 4, 6]:
+    raise AssertionError
+if lc_idiv(4) != [0.0, 0.0, 1.0, 1.0]:
+    raise AssertionError
+if lc_fdiv(4) != [0.0, 0.5, 1.0, 1.5]:
+    raise AssertionError
 
 
 # Hier begin je met de functies voor deze opgave:
@@ -109,24 +112,38 @@ def c(x):
     return (4 - x ** 2) ** 0.5
 
 #Test de unitfracs funcite
-assert unitfracs(2) == [0.0, 0.5]
-assert unitfracs(5) == [0.0, 0.2, 0.4, 0.6, 0.8]
-assert unitfracs(10) == [0.0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9]
+if unitfracs(2) != [0.0, 0.5]:
+    raise AssertionError
+if unitfracs(5) != [0.0, 0.2, 0.4, 0.6, 0.8]:
+    raise AssertionError
+if unitfracs(10) != [0.0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9]:
+    raise AssertionError
 #Test de scaledfracs functie
-assert scaledfracs(10, 30, 5) == [10.0, 14.0, 18.0, 22.0, 26.0]
-assert scaledfracs(41, 43, 8) == [41.0, 41.25, 41.5, 41.75, 42.0, 42.25, 42.5, 42.75]
-assert scaledfracs(0, 10, 4) == [0.0, 2.5, 5.0, 7.5]
+if scaledfracs(10, 30, 5) != [10.0, 14.0, 18.0, 22.0, 26.0]:
+    raise AssertionError
+if scaledfracs(41, 43, 8) != [41.0, 41.25, 41.5, 41.75, 42.0, 42.25, 42.5, 42.75]:
+    raise AssertionError
+if scaledfracs(0, 10, 4) != [0.0, 2.5, 5.0, 7.5]:
+    raise AssertionError
 #Test de sqfracs functie
-assert sqfracs(4, 10, 6) == [16.0, 25.0, 36.0, 49.0, 64.0, 81.0]
-assert sqfracs(0, 10, 5) == [0.0, 4.0, 16.0, 36.0, 64.0]
-assert sqfracs(0,100,8) == [0.0, 156.25, 625.0, 1406.25, 2500.0, 3906.25, 5625.0, 7656.25]
+if sqfracs(4, 10, 6) != [16.0, 25.0, 36.0, 49.0, 64.0, 81.0]:
+    raise AssertionError
+if sqfracs(0, 10, 5) != [0.0, 4.0, 16.0, 36.0, 64.0]:
+    raise AssertionError
+if sqfracs(0,100,8) != [0.0, 156.25, 625.0, 1406.25, 2500.0, 3906.25, 5625.0, 7656.25]:
+    raise AssertionError
 #Test de f_of_fracs functie
-assert f_of_fracs(dbl, 10, 20, 5) == [20.0, 24.0, 28.0, 32.0, 36.0]
-assert f_of_fracs(sq, 4, 10, 6) == [16.0, 25.0, 36.0, 49.0, 64.0, 81.0]
-assert f_of_fracs(sin, 0, pi, 2) == [0.0, 1.0]
+if f_of_fracs(dbl, 10, 20, 5) != [20.0, 24.0, 28.0, 32.0, 36.0]:
+    raise AssertionError
+if f_of_fracs(sq, 4, 10, 6) != [16.0, 25.0, 36.0, 49.0, 64.0, 81.0]:
+    raise AssertionError
+if f_of_fracs(sin, 0, pi, 2) != [0.0, 1.0]:
+    raise AssertionError
 #Test de integrate functie
-assert integrate(dbl, 0, 10, 4) == 75
-assert integrate(sq, 0, 10, 4) == 2.5 * sum([0, 2.5*2.5, 5*5, 7.5*7.5])
+if integrate(dbl, 0, 10, 4) != 75:
+    raise AssertionError
+if integrate(sq, 0, 10, 4) != 2.5 * sum([0, 2.5*2.5, 5*5, 7.5*7.5]):
+    raise AssertionError
 
 """
 Vraag 1:

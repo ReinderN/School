@@ -114,50 +114,87 @@ def transcribe(s):
     return '' + transcribe(s[1:])
 
 # Tests mult
-assert mult(6, 7) == 42
-assert mult(6, -7) == -42
-assert mult(-6, 7) == -42
-assert mult(-6, -7) == 42
-assert mult(6, 0) == 0
-assert mult(0, 7) == 0
-assert mult(0, 0) == 0 
-assert mult(0, 0) == 0
+if mult(6, 7) != 42:
+    raise AssertionError
+if mult(6, -7) != -42:
+    raise AssertionError
+if mult(-6, 7) != -42:
+    raise AssertionError
+if mult(-6, -7) != 42:
+    raise AssertionError
+if mult(6, 0) != 0:
+    raise AssertionError
+if mult(0, 7) != 0:
+    raise AssertionError
+if mult(0, 0) != 0:
+    raise AssertionError
+if mult(0, 0) != 0:
+    raise AssertionError
 
 # Tests dot
-assert dot([5, 3], [6, 4]) == 42.0
-assert dot([1, 2, 3, 4], [10, 100, 1000, 10000]) == 43210.0
-assert dot([5, 3], [6]) == 0.0
-assert dot([], [6]) == 0.0
-assert dot([], []) == 0.0
+if dot([5, 3], [6, 4]) != 42.0:
+    raise AssertionError
+if dot([1, 2, 3, 4], [10, 100, 1000, 10000]) != 43210.0:
+    raise AssertionError
+if dot([5, 3], [6]) != 0.0:
+    raise AssertionError
+if dot([], [6]) != 0.0:
+    raise AssertionError
+if dot([], []) != 0.0:
+    raise AssertionError
 
 # Tests ind
-assert ind(42, [55, 77, 42, 12, 42, 100]) == 2
-assert ind(42, list(range(0, 100))) == 42
-assert ind("hoi", ["hallo", 42, True]) == 3
-assert ind("hoi", ["oh", "hoi", "daar"]) == 1
-assert ind("i", "team") == 4
-assert ind(" ", "nader onderzoek") == 5
+if ind(42, [55, 77, 42, 12, 42, 100]) != 2:
+    raise AssertionError
+if ind(42, list(range(0, 100))) != 42:
+    raise AssertionError
+if ind("hoi", ["hallo", 42, True]) != 3:
+    raise AssertionError
+if ind("hoi", ["oh", "hoi", "daar"]) != 1:
+    raise AssertionError
+if ind("i", "team") != 4:
+    raise AssertionError
+if ind(" ", "nader onderzoek") != 5:
+    raise AssertionError
 
 # Tests letter_score
-assert letter_score('a') == 1
-assert letter_score('x') == 8
-assert letter_score('d') == 1
-assert letter_score('h') == 2
-assert letter_score('e') == 1
-assert letter_score('g') == 2
-assert letter_score('p') == 3
+if letter_score('a') != 1:
+    raise AssertionError
+if letter_score('x') != 8:
+    raise AssertionError
+if letter_score('d') != 1:
+    raise AssertionError
+if letter_score('h') != 2:
+    raise AssertionError
+if letter_score('e') != 1:
+    raise AssertionError
+if letter_score('g') != 2:
+    raise AssertionError
+if letter_score('p') != 3:
+    raise AssertionError
 
 # Tests scrabble_score
-assert scrabble_score("quotums") == 24
-assert scrabble_score("jacquet") == 24
-assert scrabble_score("pyjama") == 20
-assert scrabble_score("abcdefghijklmnopqrstuvwxyz") == 84
-assert scrabble_score("?!@#$%^&*()") == 0
-assert scrabble_score("") == 0
+if scrabble_score("quotums") != 24:
+    raise AssertionError
+if scrabble_score("jacquet") != 24:
+    raise AssertionError
+if scrabble_score("pyjama") != 20:
+    raise AssertionError
+if scrabble_score("abcdefghijklmnopqrstuvwxyz") != 84:
+    raise AssertionError
+if scrabble_score("?!@#$%^&*()") != 0:
+    raise AssertionError
+if scrabble_score("") != 0:
+    raise AssertionError
 
 # Tests transcribe
-assert transcribe('ACGTTGCA') == 'UGCAACGU'
-assert transcribe('ACG TGCA') == 'UGCACGU'  # spatie verdwijnt
-assert transcribe('GATTACA')  == 'CUAAUGU'
-assert transcribe('hanze')    == ''         # Andere tekens verdwijnen
-assert transcribe('')         == '' 
+if transcribe('ACGTTGCA') != 'UGCAACGU':
+    raise AssertionError
+if transcribe('ACG TGCA') != 'UGCACGU':
+    raise AssertionError
+if transcribe('GATTACA') != 'CUAAUGU':
+    raise AssertionError
+if transcribe('hanze') != '':
+    raise AssertionError
+if transcribe('') != '':
+    raise AssertionError
