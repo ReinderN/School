@@ -30,7 +30,7 @@ def print_params(params):
 
 def tr(params, rf):
     """tr transforms raw frames to floating-point samples"""
-    samps = [x for x in rf]    # omzetten naar numerieke bytes
+    samps = list(rf)    # omzetten naar numerieke bytes
     # parameters betere namen geven
     nchannels = params[0]
     sampwidth = params[1]
