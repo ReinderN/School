@@ -50,7 +50,6 @@ def randomize(x, chance_of_replacing):
  With the "chance_of_replacing" chance, it
  should return a random float from -32767 to 32767.
  Otherwise, it should return x (not replacing it)."""
-
  r = random.uniform(0, 1)
  if r < chance_of_replacing:
     return random.uniform(-32768, 32767)
