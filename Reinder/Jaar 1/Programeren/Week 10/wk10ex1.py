@@ -109,7 +109,7 @@ class Date:
             if self.is_leap_year() and self.day == 29:
                 self.day = 0
                 self.month += 1
-            elif (self.is_leap_year() == False) and self.day == 28:
+            elif (self.is_leap_year() is False) and self.day == 28:
                 self.day = 0
                 self.month += 1
         elif self.month == 12 and self.day == 31:
@@ -130,7 +130,7 @@ class Date:
             if self.is_leap_year() and self.day == 1:
                 self.day = 30
                 self.month -= 1
-            elif (self.is_leap_year() == False) and self.day == 1:
+            elif (self.is_leap_year() is False) and self.day == 1:
                 self.day = 29
                 self.month -= 1
         elif self.month == 1 and self.day == 1:
