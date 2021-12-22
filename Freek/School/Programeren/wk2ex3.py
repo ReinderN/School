@@ -9,8 +9,7 @@ def leng(s):
     """
     if s == '' or s == []:   # als lege string of lege lijst
         return 0
-    else:
-      return 1 + leng(s[1:])
+    return 1 + leng(s[1:])
 
 def mult(n, m):
     """mult returns n times m
@@ -23,11 +22,11 @@ def mult(n, m):
     """
     if n == 1:
         return m
-    elif n == -1:
+    if n == -1:
         return -m
-    elif n > 0:
+    if n > 0:
         return m + mult(n-1, m)
-    elif n <= 0:
+    if n <= 0:
         return -m + mult(n+1, m)       
         return -m + mult(n+1, m)
 
@@ -42,10 +41,9 @@ def dot(L, k):
     '''
     if len(L) != len(k):
         return 0.0
-    elif L == [] and k == []:
+    if L == [] and k == []:
         return 0.0
-    else:
-        return L[0] * k[0] + dot(L[1:], k[1:])
+    return L[0] * k[0] + dot(L[1:], k[1:])
 
 def ind(e, L):
     """ind komt terug met de index waar je de letter e of l vind
@@ -58,10 +56,9 @@ def ind(e, L):
     """
     if e == L[0]:
         return 0
-    elif e in L:
+    if e in L:
         return 1 + ind(e, L[1:])
-    else:
-        return len(L)
+    return len(L)
 
 def letter_score(let):
     """letter_score brengt de score terug op de letter
@@ -72,22 +69,21 @@ def letter_score(let):
     """
     if let in "adeinorst":
         return 1
-    elif let in "ghl":
+    if let in "ghl":
         return 2
-    elif let in "bcmp":
+    if let in "bcmp":
         return 3
-    elif let in "kuvjwm":
+    if let in "kuvjwm":
         return 4
-    elif let in "f":
+    if let in "f":
         return 5
-    elif let in "z":
+    if let in "z":
         return 6
-    elif let in "xy":
+    if let in "xy":
         return 8
-    elif let in "q":
+    if let in "q":
         return 10
-    else:
-        return 0
+    return 0
 
 def scrabble_score(s):
     """scrabble_score brengt de score terug naar een woord
@@ -97,8 +93,7 @@ def scrabble_score(s):
     """
     if s ==  "":
         return 0
-    else:
-        return letter_score(s[0]) + scrabble_score(s[1:])
+    return letter_score(s[0]) + scrabble_score(s[1:])
 
 def transcribe(s):
     """transcribe Brengt terug naar een RNA naar een DNA strings
@@ -108,16 +103,15 @@ def transcribe(s):
     """
     if len(s) == 0:
         return ''
-    elif s[0] == 'A':
+    if s[0] == 'A':
         return 'U' + transcribe(s[1:])
-    elif s[0] == 'C':
+    if s[0] == 'C':
         return 'G' + transcribe(s[1:])
-    elif s[0] == 'G':
+    if s[0] == 'G':
         return 'C' + transcribe(s[1:])
-    elif s[0] == 'T':
+    if s[0] == 'T':
         return 'A' + transcribe(s[1:])
-    else:
-        return '' + transcribe(s[1:])
+    return '' + transcribe(s[1:])
 
 # Tests mult
 assert mult(6, 7) == 42

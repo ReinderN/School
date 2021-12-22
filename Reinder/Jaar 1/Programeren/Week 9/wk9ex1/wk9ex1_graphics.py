@@ -43,12 +43,11 @@ def all_zeroes(L):
     """Checks if the board is all zeroes"""
     if type(board[0]) == int:  # als het bord maar 1 lijst is...
         return L == [0] * len(L)
-    else:  # als het bord een raster is...
-        counter = 0
-        for k in L:
-            if k == [0] * len(k):
-                counter += 1
-        return counter == len(L)
+    counter = 0
+    for k in L:
+        if k == [0] * len(k):
+            counter += 1
+    return counter == len(L)
 
 
 def show_good():

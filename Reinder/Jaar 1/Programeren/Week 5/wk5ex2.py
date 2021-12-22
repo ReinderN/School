@@ -12,8 +12,7 @@ def num_to_base_b(n, b):
 
     if n == 0:
         return""
-    else:
-        return num_to_base_b(n // b, b) + str(n % b)
+    return num_to_base_b(n // b, b) + str(n % b)
 
 
 def base_b_to_num(s, b):
@@ -27,8 +26,7 @@ def base_b_to_num(s, b):
     '''
     if s == '':
         return 0
-    else:
-        return base_b_to_num(s[0:-1], b) * b + int(s[-1])
+    return base_b_to_num(s[0:-1], b) * b + int(s[-1])
 
 
 def base_to_base(b1, b2, s_in_b1):
@@ -73,16 +71,16 @@ def add_b(s, t):
     '''
     if len(s) == 0:
         return t
-    elif len(t) == 0:
+    if len(t) == 0:
         return s
 
     if s[-1] == '0' and t[-1] == '0':
         return add_b(s[:-1], t[:-1]) + '0'
-    elif s[-1] == '1' and t[-1] == '0':
+    if s[-1] == '1' and t[-1] == '0':
         return add_b(s[:-1], t[:-1]) + '1'
-    elif s[-1] == '0' and t[-1] == '1':
+    if s[-1] == '0' and t[-1] == '1':
         return add_b(s[:-1], t[:-1]) + '1'
-    elif s[-1] == '1' and t[-1] == '1':
+    if s[-1] == '1' and t[-1] == '1':
         carry = add_b("1", s[:-1])
         return add_b(carry, t[:-1]) + '0'
 
@@ -113,9 +111,9 @@ def num_to_binary(n):
     """
     if n == 0:
         return ""
-    elif n % 2 == 1:
+    if n % 2 == 1:
         return num_to_binary(n//2) + "1"
-    elif n % 2 == 0:
+    if n % 2 == 0:
         return num_to_binary(n//2) + "0"
 
 
@@ -157,23 +155,21 @@ def compress(s):
     compr = ''
     if s == '':
         return ''
-    else:
-        charcount = counter(s)
-        if charcount[0] == '1':
-            charcount[1] += 128
-            base = num_to_binary_8bit(charcount[1])
-            compressed = compress(s[charcount[1]-128:])
-            aflat_list = flattenNestedList([base, compressed])
-            for x in aflat_list:
-                compr += x
-            return compr
-        else:
-            base = num_to_binary_8bit(charcount[1])
-            compressed = compress(s[charcount[1]:])
-            aflat_list = flattenNestedList([base, compressed])
-            for x in aflat_list:
-                compr += x
-            return compr
+    charcount = counter(s)
+    if charcount[0] == '1':
+        charcount[1] += 128
+        base = num_to_binary_8bit(charcount[1])
+        compressed = compress(s[charcount[1]-128:])
+        aflat_list = flattenNestedList([base, compressed])
+        for x in aflat_list:
+            compr += x
+        return compr
+    base = num_to_binary_8bit(charcount[1])
+    compressed = compress(s[charcount[1]:])
+    aflat_list = flattenNestedList([base, compressed])
+    for x in aflat_list:
+        compr += x
+    return compr
 
 
 def binary_to_num(s):
@@ -186,11 +182,9 @@ def binary_to_num(s):
     if s == "":
         return 0
 
-    elif s[-1] == "1":
+    if s[-1] == "1":
         return 2*binary_to_num(s[:-1]) + 1
-
-    else:
-        return 2*binary_to_num(s[:-1]) + 0
+    return 2*binary_to_num(s[:-1]) + 0
 
 
 def uncompresser(s):
@@ -202,8 +196,7 @@ def uncompresser(s):
     '''
     if s[0] == '0':
         return '0'*binary_to_num(s[1:])
-    else:
-        return '1'*binary_to_num(s[1:])
+    return '1'*binary_to_num(s[1:])
 
 
 def uncompress(c):

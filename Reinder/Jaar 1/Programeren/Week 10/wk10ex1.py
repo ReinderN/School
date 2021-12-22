@@ -38,9 +38,9 @@ class Date:
         in a leap year; False otherwise."""
         if self.year % 400 == 0:
             return True
-        elif self.year % 100 == 0:
+        if self.year % 100 == 0:
             return False
-        elif self.year % 4 == 0:
+        if self.year % 4 == 0:
             return True
         return False
 
@@ -56,8 +56,7 @@ class Date:
         """
         if self.year == d2.year and self.month == d2.month and self.day == d2.day:
             return True
-        else:
-            return False
+        return False
 
     def __eq__(self, d2):
         """Overrides the == operator so that it declares two of the same dates
@@ -66,21 +65,19 @@ class Date:
         """
         if self.year == d2.year and self.month == d2.month and self.day == d2.day:
             return True
-        else:
-            return False
+        return False
 
     def is_before(self, d2):
         '''This function returns True if date is befores another date'''
         if self.year < d2.year:
             return True
-        elif self.year == d2.year:
+        if self.year == d2.year:
             if self.month < d2.month:
                 return True
-            elif self.month == d2.month:
+            if self.month == d2.month:
                 if self.day < d2.day:
                     return True
-                else:
-                    return False
+                return False
             else:
                 return False
         else:
@@ -94,8 +91,7 @@ class Date:
         '''This function returns True if date is after another date'''
         if self < d2:
             return False
-        else:
-            return True
+        return True
 
     def __gt__(self, d2):
         '''This function changes the way < behaves'''
@@ -194,17 +190,17 @@ class Date:
         dow = (count % 7)-1
         if dow == 1:
             return 'monday'
-        elif dow == 2:
+        if dow == 2:
             return 'Tuesday'
-        elif dow == 3:
+        if dow == 3:
             return 'Wednesday'
-        elif dow == 4:
+        if dow == 4:
             return 'Thursday'
-        elif dow == 5:
+        if dow == 5:
             return 'Friday'
-        elif dow == 6:
+        if dow == 6:
             return 'Saturday'
-        elif dow == 0:
+        if dow == 0:
             return 'Sunday'
 
     #

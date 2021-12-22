@@ -11,8 +11,7 @@ def is_odd(n):
     """
     if n%2 == 0:
         return False
-    else:
-        return True
+    return True
 
 def num_to_binary(n):
     """
@@ -23,10 +22,9 @@ def num_to_binary(n):
     """
     if n == 0:
         return ""
-    elif n % 2 == 1:
+    if n % 2 == 1:
         return num_to_binary(n//2) + "1"
-    else:
-        return num_to_binary(n//2) + "0"
+    return num_to_binary(n//2) + "0"
 
 def binary_to_num(s):
     """
@@ -38,11 +36,9 @@ def binary_to_num(s):
     if s == "":
         return 0
 
-    elif s[-1] == "1":
+    if s[-1] == "1":
         return 2*binary_to_num(s[:-1]) + 1
-
-    else:
-        return 2*binary_to_num(s[:-1]) + 0
+    return 2*binary_to_num(s[:-1]) + 0
 
 def increment(S):
     """
@@ -61,10 +57,9 @@ def increment(S):
     if leny > 8:
         nleny = leny -8
         return y[nleny:]
-    else:
-        ny = "0"*8+y
-        nleny = len(ny) -8
-        return ny[nleny:]
+    ny = "0"*8+y
+    nleny = len(ny) -8
+    return ny[nleny:]
 
 def count(s,n):
     """
@@ -76,9 +71,8 @@ def count(s,n):
     """
     if n < 0:
         return
-    else:
-        print(s)
-        count(increment(s), n-1)
+    print(s)
+    count(increment(s), n-1)
 
 def num_to_ternary(n):
     """
@@ -89,12 +83,11 @@ def num_to_ternary(n):
     """
     if n == 0:
         return ""
-    elif n % 3 == 1:
+    if n % 3 == 1:
         return num_to_ternary(n//3) + "1"
-    elif n % 3 == 2:
+    if n % 3 == 2:
         return num_to_ternary(n//3) + "2"
-    else:
-        return num_to_ternary(n//3) + "0"
+    return num_to_ternary(n//3) + "0"
 
 def ternary_to_num(s):
     """
@@ -106,14 +99,12 @@ def ternary_to_num(s):
     if s == "":
         return 0
 
-    elif s[-1] == "1":
+    if s[-1] == "1":
         return 3*ternary_to_num(s[:-1]) + 1
 
-    elif s[-1] == "2":
+    if s[-1] == "2":
         return 3*ternary_to_num(s[:-1]) + 2
-
-    else:
-        return 3*ternary_to_num(s[:-1]) + 0
+    return 3*ternary_to_num(s[:-1]) + 0
 
 def balanced_ternary_to_num(s):
     """
@@ -125,14 +116,12 @@ def balanced_ternary_to_num(s):
     if s == "":
         return 0
 
-    elif s[-1] == "+":
+    if s[-1] == "+":
         return 3*balanced_ternary_to_num(s[:-1]) + 1
 
-    elif s[-1] == "-":
+    if s[-1] == "-":
         return 3*balanced_ternary_to_num(s[:-1]) + -1
-
-    else:
-        return 3*balanced_ternary_to_num(s[:-1]) + 0
+    return 3*balanced_ternary_to_num(s[:-1]) + 0
 
 def num_to_balanced_ternary(n):
     """
@@ -143,11 +132,11 @@ def num_to_balanced_ternary(n):
     """
     if n == 0:
         return ""
-    elif n % 3 == 1:
+    if n % 3 == 1:
         return num_to_balanced_ternary(n//3) + "+"
-    elif n % 3 == 2:
+    if n % 3 == 2:
         return num_to_balanced_ternary((n//3)+1) + "-"
-    elif n % 3 == 0:
+    if n % 3 == 0:
         return num_to_balanced_ternary(n//3) + "0"    
 
 assert is_odd(3)

@@ -65,8 +65,7 @@ def we_want_this_pixel(col, row):
     if col % 10 == 0 and row % 10 == 0:
         # Schrijft veel pixels in lijnen waardoor je lijnen krijgt ipv stippen
         return True
-    else:
-        return False
+    return False
 
 
 def test():

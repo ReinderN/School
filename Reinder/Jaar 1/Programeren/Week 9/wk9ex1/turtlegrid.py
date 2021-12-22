@@ -47,8 +47,7 @@ def color_lookup(clr):
     global clr_d
     if clr in clr_d:
         return clr_d[clr]
-    else:
-        return clr
+    return clr
 
 
 def drawsq(ulx, uly, side, clr):
