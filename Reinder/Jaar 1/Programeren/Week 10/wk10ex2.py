@@ -152,10 +152,13 @@ class Board:
 
     def is_full(self):
         '''deze functie controleerd of het bord vol is'''
+        full = 0
         for col in range(0, self.width):
             result = self.allows_move(col)
             if result is False:
-                return True
+                full += 1
+        if full == self.width:
+            return True
         return False
 
     def del_move(self, col):
@@ -228,15 +231,15 @@ assert not b.allows_move(8)
 
 b.clear()
 assert not b.is_full()
-b.set_board('000000111111222222333333444444555555')
+b.set_board('000000111111222222333333444444555555666666')
 assert b.is_full()
 
 b.del_move(1)
-assert b.data == [['O', ' ', 'O', 'O', 'O', 'O', ' '], ['X', 'X', 'X', 'X', 'X', 'X', ' '], ['O', 'O', 'O', 'O', 'O', 'O', ' '], [
-    'X', 'X', 'X', 'X', 'X', 'X', ' '], ['O', 'O', 'O', 'O', 'O', 'O', ' '], ['X', 'X', 'X', 'X', 'X', 'X', ' ']]
+assert b.data == [['O', ' ', 'O', 'O', 'O', 'O', 'O'], ['X', 'X', 'X', 'X', 'X', 'X', 'X'], ['O', 'O', 'O', 'O', 'O', 'O', 'O'], [
+    'X', 'X', 'X', 'X', 'X', 'X', 'X'], ['O', 'O', 'O', 'O', 'O', 'O', 'O'], ['X', 'X', 'X', 'X', 'X', 'X', 'X']]
 b.del_move(0)
-assert b.data == [[' ', ' ', 'O', 'O', 'O', 'O', ' '], ['X', 'X', 'X', 'X', 'X', 'X', ' '], ['O', 'O', 'O', 'O', 'O', 'O', ' '], [
-    'X', 'X', 'X', 'X', 'X', 'X', ' '], ['O', 'O', 'O', 'O', 'O', 'O', ' '], ['X', 'X', 'X', 'X', 'X', 'X', ' ']]
+assert b.data == [[' ', ' ', 'O', 'O', 'O', 'O', 'O'], ['X', 'X', 'X', 'X', 'X', 'X', 'X'], ['O', 'O', 'O', 'O', 'O', 'O', 'O'], [
+    'X', 'X', 'X', 'X', 'X', 'X', 'X'], ['O', 'O', 'O', 'O', 'O', 'O', 'O'], ['X', 'X', 'X', 'X', 'X', 'X', 'X']]
 
 b.clear()
 b.set_board('01122323353')
