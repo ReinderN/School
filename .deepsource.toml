@@ -1,8 +1,8 @@
 version = 1
 
 exclude_patterns = [
-  "Bas/**",
-  "Freek/**"
+  "Freek/**",
+  "Bas/**"
 ]
 
 [[analyzers]]
