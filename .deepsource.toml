@@ -1,7 +1,5 @@
 version = 1
 
-exclude_patterns = ["Freek/**"]
-
 [[analyzers]]
 name = "python"
 enabled = true
