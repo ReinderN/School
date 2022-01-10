@@ -1,8 +1,6 @@
 version = 1
 
-exclude_patterns = [
-  "Freek/**"
-]
+exclude_patterns = ["Freek/**"]
 
 [[analyzers]]
 name = "python"
