@@ -79,8 +79,7 @@ class Date:
                     return True
                 return False
             return False
-        else:
-            return False
+        return False
 
     def __lt__(self, d2):
         '''This function changes the way > behaves'''
