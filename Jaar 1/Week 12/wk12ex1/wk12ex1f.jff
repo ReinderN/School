@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><!--Created with JFLAP 6.4.--><structure>&#13;
+	<type>fa</type>&#13;
+	<automaton>&#13;
+		<note>&#13;
+			<text>Dit is wk12ex1f.jff, een bestand voor de FSM die controleert of de eerste twee bits == de laatste twee bits</text>&#13;
+			<x>8.0</x>&#13;
+			<y>47.0</y>&#13;
+		</note>&#13;
+	</automaton>&#13;
+</structure>

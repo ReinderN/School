@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><!--Created with JFLAP 6.4.--><structure>&#13;
+	<type>fa</type>&#13;
+	<automaton>&#13;
+		<note>&#13;
+			<text>wk12ex1e.jff:   Maak een FSM die strings accepteert waarvan de derde bit van rechts een 1 is.</text>&#13;
+			<x>6.0</x>&#13;
+			<y>9.0</y>&#13;
+		</note>&#13;
+		<note>&#13;
+			<text>Deze is moeilijker... kijk nog eens naar de slides van het college.</text>&#13;
+			<x>6.0</x>&#13;
+			<y>29.0</y>&#13;
+		</note>&#13;
+	</automaton>&#13;
+</structure>

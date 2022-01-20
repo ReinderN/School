@@ -1,0 +1,31 @@
+ reject
+0 reject
+1 reject
+00 reject
+01 reject
+10 reject
+11 reject
+000 reject
+001
+010 reject
+011
+100 reject
+101
+110 reject
+111
+0000 reject
+0001 reject
+0010
+0011
+0100 reject
+0101 reject
+0110
+0111
+1000 reject
+1001 reject
+1010
+1011
+1100 reject
+1101 reject
+1110
+1111

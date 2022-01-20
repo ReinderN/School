@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><!--Created with JFLAP 6.4.--><structure>
+	<type>turing</type>
+	<automaton>
+		<note>
+			<text>Dit is wk12ex1i.jff, een bestand voor de TM die palindromen controleert</text>
+			<x>11.0</x>
+			<y>11.0</y>
+		</note>
+	</automaton>
+</structure>
