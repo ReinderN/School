@@ -1,6 +1,4 @@
 #
-# wk1ex2a.py
-# 
 
 import random          # importeer de module met de naam random
 

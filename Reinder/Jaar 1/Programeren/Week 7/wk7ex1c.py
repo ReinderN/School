@@ -134,7 +134,6 @@ def test(s):
     # print("list_of_strings is", list_of_string)
     # converteer ze allemaal naar ints
     list_of_integers = [int(s) for s in list_of_strings]
-    # print("list_of_integers is", list_of_integers)
     return unique(list_of_integers)
 
 
