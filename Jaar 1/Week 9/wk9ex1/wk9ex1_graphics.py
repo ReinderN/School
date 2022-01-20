@@ -41,7 +41,7 @@ global board
 
 def all_zeroes(L):
     """Checks if the board is all zeroes"""
-    if type(board[0]) == int:  # als het bord maar 1 lijst is...
+    if type(board[0]) is int:  # als het bord maar 1 lijst is...
         return L == [0] * len(L)
     counter = 0
     for k in L:
