@@ -149,7 +149,7 @@ def show_2d(l):
 
 def show(l):
     """Shows the list or grid l using the graphics"""
-    if type(l[0]) == list:
+    if type(l[0]) is list:
         show_2d(l)
     else:
         show_1d(l)
