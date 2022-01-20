@@ -5,7 +5,7 @@
 
 import random
 import math
-from audio import *
+from audio import play, read_wav, write_wav
 
 
 # een functie zodat we kunnen beginnen met een opfrisser
@@ -30,6 +30,8 @@ def scale(L, scale_factor):
 
 # hier is een voorbeeld van hoe je op een andere
 # manier de functie three_ize kan schrijven:
+
+
 def three_ize_by_index(L):
     """three_ize_by_index has the same behavior as three_ize
        but it uses the INDEX of each element, instead of
@@ -41,6 +43,8 @@ def three_ize_by_index(L):
     return lc
 
 # Te schrijven functie #2: add_2
+
+
 def add_2(L, m):
     """add_2 returns the item that is indexed at the same position on both lists added together"""
     n = min(len(L), len(m))
@@ -48,18 +52,23 @@ def add_2(L, m):
     return lc
 
 # Te schrijven functie #3: add_3
+
+
 def add_3(L, m, p):
-    """add_3 returns the item that is indexed at the same position on all lists added together"""    
+    """add_3 returns the item that is indexed at the same position on all lists added together"""
     n = min(len(L), len(m), len(p))
     lc = [L[i] + m[i] + p[i] for i in range(n)]
     return lc
 
 # Te schrijven functie #4: add_scale_2
+
+
 def add_scale_2(L, m, L_scale, m_scale):
     """add_scale_2 returns values from a list multiplied by their scale and than added together with an item at the same position as another list"""
     n = min(len(L), len(m))
     lc = [L[i] * L_scale + m[i] * m_scale for i in range(n)]
     return lc
+
 
 def add_scale_3(L, m, p, L_scale, m_scale, p_scale):
     """add_scale_3 returns values from a list multiplied by their scale and than added together with an item at the same position as other lists"""
@@ -68,6 +77,7 @@ def add_scale_3(L, m, p, L_scale, m_scale, p_scale):
     return lc
 
 # Hulpfunctie: randomize
+
 
 def randomize(x, chance_of_replacing):
     """randomize accepts an original value, x
@@ -190,6 +200,8 @@ def reverse(filename):
     play('out.wav')
 
 # Te schrijven geluidsfunctie #2: volume
+
+
 def volume(filename, scale_factor):
     """volume changes the volume of a file by a scale of scale_factor
     filename: the file that needs it volume to be higher
@@ -217,6 +229,8 @@ def volume(filename, scale_factor):
     play('out.wav')
 
 # Te schrijven geluidsfunctie #3: static
+
+
 def static(filename, probability_of_static):
     """static adds static noise on filename with a probability of becoming more static using probabliity_of_static
     filename: the file that needs to have static noise added to it
@@ -241,9 +255,11 @@ def static(filename, probability_of_static):
     write_wav(new_sound_data, "out.wav")  # schrijf gegevens naar out.wav
 
     print("Nieuw geluid afspelen...")
-    play('out.wav')    
+    play('out.wav')
 
 # Te schrijven geluidsfunctie #4: overlay
+
+
 def overlay(filename1, filename2):
     """overlay combines 2 files toghether to have them be played at the same time
     filename1: one of the files to play
@@ -272,9 +288,11 @@ def overlay(filename1, filename2):
     write_wav(new_sound_data, "out.wav")  # schrijf gegevens naar out.wav
 
     print("Nieuw geluid afspelen...")
-    play('out.wav')       
+    play('out.wav')
 
 # Te schrijven geluidsfunctie #5: echo
+
+
 def echo(filename, time_delay):
     """echo gives a reverb to a file using a delay
     filename: the file to add reverb to
@@ -300,9 +318,11 @@ def echo(filename, time_delay):
     write_wav(new_sound_data, "out.wav")  # schrijf gegevens naar out.wav
 
     print("Nieuw geluid afspelen...")
-    play('out.wav')      
+    play('out.wav')
 
 # Hulpfunctie om pure tonen te genereren
+
+
 def gen_pure_tone(freq, seconds, sound_data):
     """pure_tone returns the y-values of a cosine wave
        whose frequency is freq Hertz.
@@ -354,7 +374,7 @@ def chord(f1, f2, f3, time_in_seconds):
     samps2 = [0] * int(sr1) + samps2 + [0] * int(sr1)
     samps3 = [0] * int(sr1*2) + samps3
 
-    newsamps = add_scale_3(samps1,samps2,samps3, .1,.1,.1)
+    newsamps = add_scale_3(samps1, samps2, samps3, .1, .1, .1)
     newsr = (sr1+sr2+sr3)/3
     new_sound_data = [newsamps, newsr]
 
