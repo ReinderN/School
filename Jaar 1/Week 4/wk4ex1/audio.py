@@ -241,8 +241,7 @@ def write_wav(sound_data, filename="out.wav"):
     framerate = int(samplingrate)
     if framerate < 0:
         framerate = -framerate
-    if framerate < 1:
-        framerate = 1
+    framerate = max(framerate, 1)
     # altijd 1 kanaal en 2 uitvoerbytes per sample
     params = [1, 2, framerate, len(data), "NONE", "No compression"]
     # omzetten naar ruwe frames
