@@ -3,7 +3,6 @@
 # Naam: Reinder Noordmans
 # Probleemomschrijving: Geluidsbewerking
 
-import time
 import random
 import math
 from audio import *
