@@ -25,7 +25,7 @@ def rot(c, n):
 
 def encipher(s,n):
     """encrypts the string(s) using the ceasar method with steps of n.
-    
+
     s: the string you want to encrypt
     n: the amount of steps(non negative) you want to take to encrypt the string(s)
     """
