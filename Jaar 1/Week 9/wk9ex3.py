@@ -76,7 +76,7 @@ def main():
             continue
         if choice == 9:
             break
-        elif choice == 0:
+        if choice == 0:
             new_L = input('Nieuwe lijst: ')
             L = new_list(new_L)
         elif choice == 1:
