@@ -20,8 +20,6 @@ def print_2d(a):
         for c in range(cols):  # cols == aantal kolommen
             print(a[r][c], end=' ')
         print()
-
-    return None  # dit is impliciet aanwezig
     # als er geen return-statement aanwezig is
 
 
