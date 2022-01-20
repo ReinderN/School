@@ -36,9 +36,6 @@ def start(width=20, height=20):
     done()
 
 
-global board
-
-
 def all_zeroes(L):
     """Checks if the board is all zeroes"""
     if type(board[0]) == int:  # als het bord maar 1 lijst is...
