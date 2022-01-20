@@ -23,7 +23,7 @@ def tpl(x):
 def sq(x):
     """
     Returns the argument times itself
-    
+
     :param x: The value to itself
     :type x: int or float
     """
@@ -62,7 +62,7 @@ def flipside(s):
     """
     length = len(s)
     short = length//2
-    
+
     if length%2 == 0:
        flipped = s[short:] + s[:-(short)]
     else:

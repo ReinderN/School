@@ -15,7 +15,7 @@ def rs():
 
 def rwpos(start, nsteps):
     """rwpos gets a starting position and the amount of steps the bot needs to take to get a final position
-    
+
     start: the starting position for the bot as an int
     nsteps: the amount of steps the bot needs to take as a int
 
@@ -29,10 +29,10 @@ def rwpos(start, nsteps):
 
 def rwsteps(start, low, hi):
     """rwpsteps needs a starting postion and then takes a random amount of steps between low and high
-    
+
     low: the minimum amount of steps you want the bot to take
     high: the maximum amount of steps you want the bot to take
-    
+
     returns the amount of steps the bot has taken
     """
     if low < 0:
@@ -46,7 +46,7 @@ def rwsteps(start, low, hi):
 
 def rwpos_plain(start, nsteps):
     """rwpos gets a starting position and the amount of steps the bot needs to take to get a final position
-    
+
     start: the starting position for the bot as an int
     nsteps: the amount of steps the bot needs to take as a int
 

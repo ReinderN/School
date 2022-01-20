@@ -47,7 +47,7 @@ def adventure():
 # Hier wordt alleen maar gebruik gemaakt van 1 if en verder geen elif of else
     if choice2 == "ja":
         print("Je hebt gekozen om weg te gaan en komt uit bij een fontein. ")
-    
+
     time.sleep(delay)
 
     print()
@@ -71,7 +71,7 @@ def adventure():
         print("Je gaat direct weg voor je taart.")
     else:
         return "Je bent doodgegaan door de honger."
-    
+
     print()
     print("Voorwaarts naar de queeste!\n\n")
     print("Een gang strekt zich voor u uit; in het gedimde licht ziet u")

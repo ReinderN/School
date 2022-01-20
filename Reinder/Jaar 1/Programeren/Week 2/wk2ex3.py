@@ -18,7 +18,7 @@ def leng(s):
 
 def mult(n, m):
     """mult returns n times m
-        
+
         param n: one of the values to times by m
         type n: int or float
 
@@ -73,7 +73,7 @@ def ind(e, L):
 
 def letter_score(let):
     """letter_score returns the score of a letter
-        
+
         param let: the letter you want to know the score of
         type: string
 
@@ -96,7 +96,7 @@ def letter_score(let):
     if let in "q":
         return 10
     return 0
-    
+
 def scrabble_score(s):
     """scrabble_score returns the score of an entire word
 

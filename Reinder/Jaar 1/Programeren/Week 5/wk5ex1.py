@@ -5,7 +5,7 @@
 
 def is_odd(n):
     """is_odd checks if a number(n) is odd or not
-    
+
     n: int
     returns: boolean
     """

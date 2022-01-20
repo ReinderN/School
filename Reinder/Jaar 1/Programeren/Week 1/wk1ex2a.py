@@ -6,10 +6,10 @@ import random          # importeer de module met de naam random
 
 
 def rps():
-    
+
     user = input("Kies je wapen [steen, papier, schaar]: ")
     comp = random.choice(['steen', 'papier', 'schaar'])
-    
+
     print()
     print("User:", user)
     print("Computer:", comp)
