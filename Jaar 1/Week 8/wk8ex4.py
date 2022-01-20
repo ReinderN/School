@@ -5,7 +5,6 @@ def next(term):
     term: Int
     returns: Int
     '''
-
     output = ''  # Initialiseerd de output
     count = 0  # Initialiseerd de count
 

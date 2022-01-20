@@ -9,7 +9,6 @@ def num_to_base_b(n, b):
 
     returns: Str
     '''
-
     if n == 0:
         return""
     return num_to_base_b(n // b, b) + str(n % b)
@@ -39,7 +38,6 @@ def base_to_base(b1, b2, s_in_b1):
 
     returns: Str
     '''
-
     num = base_b_to_num(s_in_b1, b1)
     return num_to_base_b(num, b2)
 
@@ -53,7 +51,6 @@ def add(s, t):
 
     returns: Str
     '''
-
     num1 = base_b_to_num(s, 2)
     num2 = base_b_to_num(t, 2)
     calc = num1 + num2

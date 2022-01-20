@@ -190,7 +190,6 @@ def read_wav(filename, sound_data):
 
 def write_data(params=None, raw_frames=None, filename="out.wav"):
     """Write data out to .wav format"""
-
     fout = wave.open(filename, 'wb')
     if params:
         fout.setparams(params)

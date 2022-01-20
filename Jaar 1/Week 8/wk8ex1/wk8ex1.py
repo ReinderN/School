@@ -90,7 +90,6 @@ def test():
 def example():
     """Laat zien hoe een programma een foto importeert en een pixel versie terug geeft.
     """
-
     input_pixels = get_rgb("./pngs/alien.png")
     input_pixels = input_pixels[::-1]  # de rijen zijn omgekeerd
 
