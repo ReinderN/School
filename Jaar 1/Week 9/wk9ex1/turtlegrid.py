@@ -37,7 +37,6 @@ clr_d = {0: "white", 1: "red", 2: "blue", 3: "green", 4: "gold"}
 
 def set_color(key, color):
     clr_d[key] = color
-    return
 
 
 def color_lookup(clr):
@@ -153,7 +152,6 @@ def show(l):
         show_2d(l)
     else:
         show_1d(l)
-    return
 
 
 # stel de muishandler in...
