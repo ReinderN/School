@@ -5,7 +5,7 @@
 #
 
 # laat deze importregel staan...
-from png import *
+from png import PNGImage, get_rgb
 
 
 #

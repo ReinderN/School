@@ -3,7 +3,7 @@
 # Naam: Reinder Noordmans
 # Probleemomschrijving: Slaapwandelende student
 
-from random import *
+from random import choice, randint
 
 
 def rs():

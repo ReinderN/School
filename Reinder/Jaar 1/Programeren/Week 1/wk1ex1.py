@@ -3,7 +3,7 @@
 # Naam: Reinder Noordmans
 # Probleemomschrijving: het vier-vierenprobleem
 
-from math import *
+from math import factorial, sqrt
 
 print("Nul is", 4+4-4-4)
 print("Één is", (4+4)/(4+4))

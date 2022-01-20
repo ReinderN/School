@@ -1,4 +1,4 @@
-from turtle import *
+from turtle import clear, delay, tracer, up, pencolor, fillcolor, goto, down, seth, begin_fill, forward, right, end_fill, window_height, window_width
 
 current_L = None
 

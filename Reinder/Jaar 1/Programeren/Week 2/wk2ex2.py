@@ -1,5 +1,3 @@
-from math import *
-
 def dbl(x):
     """
     Returns twice the argument
@@ -11,6 +9,7 @@ def dbl(x):
     """
     return 2 * x
 
+
 def tpl(x):
     """
     Returns thrice the argument
@@ -20,6 +19,7 @@ def tpl(x):
     """
     return 3 * x
 
+
 def sq(x):
     """
     Returns the argument times itself
@@ -28,6 +28,7 @@ def sq(x):
     :type x: int or float
     """
     return x*x
+
 
 def interp(low, hi, fraction):
     """
@@ -44,6 +45,7 @@ def interp(low, hi, fraction):
     """
     return (hi-low)*fraction + low
 
+
 def checkends(s):
     """
     returns True if the first letter in the string is the same as the last letter in the string
@@ -52,6 +54,7 @@ def checkends(s):
     type s: string
     """
     return s[0] == s[-1]
+
 
 def flipside(s):
     """
@@ -63,11 +66,12 @@ def flipside(s):
     length = len(s)
     short = length//2
 
-    if length%2 == 0:
-       flipped = s[short:] + s[:-(short)]
+    if length % 2 == 0:
+        flipped = s[short:] + s[:-(short)]
     else:
-       flipped = s[short:] + s[:-(short)-1]
+        flipped = s[short:] + s[:-(short)-1]
     return flipped
+
 
 def convert_from_seconds(s):
     """

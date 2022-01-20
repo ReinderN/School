@@ -6,7 +6,7 @@
 
 
 # hiermee krijgen we functies als sin en cos...
-from math import *
+from math import sin, pi
 
 
 # twee extra functies (die niet in de module math hierboven zitten)
