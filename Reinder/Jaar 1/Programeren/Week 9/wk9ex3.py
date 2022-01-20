@@ -1,5 +1,8 @@
 # namen: Reinder Noordmans, Bas Mellens, Freek van Witzenburg
 
+import ast
+
+
 def menu():
     """A function that simply prints the menu"""
     print()
@@ -18,7 +21,7 @@ def new_list(new_L):
     '''deze functie zet een string om in een lijst'''
     try:
         # eval voert de Python-interpreter uit! Let op: Gevaarlijk!
-        new_L = eval(new_L)
+        new_L = ast.literal_eval(new_L)
         if not isinstance(new_L, list):
             print("Dat lijkt geen lijst. L wordt niet aangepast.")
         else:
