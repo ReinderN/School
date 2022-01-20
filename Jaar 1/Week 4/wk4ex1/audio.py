@@ -78,8 +78,7 @@ def tri(params, samps):
         for i in range(params[3]):
             # misschien een andere afrondstrategie in de toekomst?
             intval = int(samps[i])
-            if intval > 32767:
-                intval = 32767
+            intval = min(intval, 32767)
             if intval < -32767:
                 intval = -32767  # zou -32768 kunnen zijn
             if intval < 0:
