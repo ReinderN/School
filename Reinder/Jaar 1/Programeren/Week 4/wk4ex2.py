@@ -40,57 +40,57 @@ def letter_prob(c):
        Adapted from
        https://www.sttmedia.com/characterfrequency-nederlands
     """
-    if c == 'e' or c == 'E':
+    if c in ('e', 'E'):
         return 0.1909
-    if c == 'n' or c == 'N':
+    if c in ('n', 'N'):
         return 0.0991
-    if c == 'a' or c == 'A':
+    if c in ('a', 'A'):
         return 0.0769
-    if c == 't' or c == 'T':
+    if c in ('t', 'T'):
         return 0.0642
-    if c == 'i' or c == 'I':
+    if c in ('i', 'I'):
         return 0.0630
-    if c == 'o' or c == 'O':
+    if c in ('o', 'O'):
         return 0.0581
-    if c == 'r' or c == 'R':
+    if c in ('r', 'R'):
         return 0.0562
-    if c == 'd' or c == 'D':
+    if c in ('d', 'D'):
         return 0.0541
-    if c == 's' or c == 'S':
+    if c in ('s', 'S'):
         return 0.0384
-    if c == 'l' or c == 'L':
+    if c in ('l', 'L'):
         return 0.0380
-    if c == 'h' or c == 'H':
+    if c in ('h', 'H'):
         return 0.0312
-    if c == 'g' or c == 'G':
+    if c in ('g', 'G'):
         return 0.0312
-    if c == 'k' or c == 'K':
+    if c in ('k', 'K'):
         return 0.0279
-    if c == 'm' or c == 'M':
+    if c in ('m', 'M'):
         return 0.0256
-    if c == 'v' or c == 'V':
+    if c in ('v', 'V'):
         return 0.0224
-    if c == 'u' or c == 'U':
+    if c in ('u', 'U'):
         return 0.0212
-    if c == 'j' or c == 'J':
+    if c in ('j', 'J'):
         return 0.0182
-    if c == 'w' or c == 'W':
+    if c in ('w', 'W'):
         return 0.0172
-    if c == 'z' or c == 'Z':
+    if c in ('z', 'Z'):
         return 0.0160
-    if c == 'p' or c == 'P':
+    if c in ('p', 'P'):
         return 0.0149
-    if c == 'b' or c == 'B':
+    if c in ('b', 'B'):
         return 0.0136
-    if c == 'c' or c == 'C':
+    if c in ('c', 'C'):
         return 0.0130
-    if c == 'f' or c == 'F':
+    if c in ('f', 'F'):
         return 0.0073
-    if c == 'y' or c == 'Y':
+    if c in ('y', 'Y'):
         return 0.0006
-    if c == 'x' or c == 'X':
+    if c in ('x', 'X'):
         return 0.0005
-    if c == 'q' or c == 'Q':
+    if c in ('q', 'Q'):
         return 0.0001
     return 1.0
 
@@ -168,7 +168,7 @@ def exact_change(w, L):
 def lcs(s, t):
     """
     """
-    if s == "" or t == "":
+    if "" in (s, t):
         return ""
     if s[0] == t[0]:
         return s[0] + lcs(s[1:], t[1:])

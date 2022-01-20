@@ -12,7 +12,7 @@ def leng(s):
     """leng returns the length of s
        Argument: s, which can be a string or list
     """
-    if s == '' or s == []:   # als lege string of lege lijst
+    if s in ('', []):   # als lege string of lege lijst
         return 0
     return 1 + leng(s[1:])
 
