@@ -187,7 +187,6 @@ assert exact_change(0, [4, 5, 6]) is True
 assert exact_change(-47, [4, 5, 6]) is False
 assert exact_change(0, []) is True
 assert exact_change(42, []) is False
-#assert exact_change(42, [25, 16, 2, 15]) == True
 
 assert encipher("xyza", 1) == "yzab"
 assert encipher("Z A", 1) == "A B"
