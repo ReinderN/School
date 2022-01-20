@@ -6,7 +6,6 @@
 # Turtle graphics en recursie
 #
 
-import time
 from turtle import *
 from random import *
 
